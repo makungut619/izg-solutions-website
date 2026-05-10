@@ -1,101 +1,231 @@
-import Image from "next/image";
+import Link from "next/link";
+import AnimatedSection from "@/components/ui/AnimatedSection";
+import {
+  Globe,
+  MessageCircle,
+  FileText,
+  Clock,
+  Shield,
+  Zap,
+  ArrowRight,
+} from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      {/* Hero */}
+      <section className="relative min-h-[90vh] flex items-center section-padding pt-32 bg-gradient-to-br from-surface-950 via-surface-900 to-primary-950">
+        <div className="container-narrow relative z-10">
+          <AnimatedSection>
+            <p className="text-primary-400 text-sm font-medium uppercase tracking-widest mb-4">
+              Digital Solutions for Growing Businesses
+            </p>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+              Your business,
+              <br />
+              <span className="text-primary-400">always on.</span>
+            </h1>
+            <p className="text-lg md:text-xl text-surface-300 max-w-2xl mb-10 leading-relaxed">
+              We build professional websites and WhatsApp chatbots that work for
+              your business 24/7. Attract customers online, serve them
+              automatically, and grow without being glued to your phone.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 transition-colors"
+              >
+                Get Started <ArrowRight size={18} />
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center justify-center gap-2 border border-surface-600 text-surface-200 px-6 py-3 rounded-lg font-medium hover:border-surface-400 hover:text-white transition-colors"
+              >
+                View Services
+              </Link>
+            </div>
+          </AnimatedSection>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* What We Do */}
+      <section className="section-padding bg-white">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <p className="text-primary-600 text-sm font-medium uppercase tracking-widest mb-3">
+              What We Do
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-surface-900 mb-4">
+              Two pillars. One goal.
+            </h2>
+            <p className="text-surface-500 max-w-2xl mb-14 text-lg">
+              We give small and medium businesses the digital capability of much
+              larger operations — without the overhead.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <AnimatedSection delay={0.1}>
+              <div className="group p-8 rounded-2xl border border-surface-100 hover:border-primary-200 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-100 transition-colors">
+                  <Globe className="text-primary-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold mb-3">Professional Websites</h3>
+                <p className="text-surface-500 text-sm leading-relaxed">
+                  Modern, responsive websites that make your business look
+                  credible and rank on Google. Built fast, designed to convert.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <div className="group p-8 rounded-2xl border border-surface-100 hover:border-primary-200 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-100 transition-colors">
+                  <MessageCircle className="text-primary-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold mb-3">WhatsApp Automation</h3>
+                <p className="text-surface-500 text-sm leading-relaxed">
+                  Automated WhatsApp assistants that take orders, book
+                  appointments, answer questions, and capture leads — 24/7.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.3}>
+              <div className="group p-8 rounded-2xl border border-surface-100 hover:border-primary-200 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-100 transition-colors">
+                  <FileText className="text-primary-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold mb-3">Digital Catalogues</h3>
+                <p className="text-surface-500 text-sm leading-relaxed">
+                  Professional PDF product catalogues your team can share
+                  instantly — branded, structured, and print-ready.
+                </p>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="section-padding bg-surface-50">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <p className="text-primary-600 text-sm font-medium uppercase tracking-widest mb-3">
+              How It Works
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-surface-900 mb-14">
+              Simple process. Real results.
+            </h2>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              {
+                step: "01",
+                title: "We Talk",
+                desc: "Tell us about your business and what you need. We'll show you what's possible.",
+              },
+              {
+                step: "02",
+                title: "We Demo",
+                desc: "We build a quick preview so you can see how your solution will look and feel — before you commit.",
+              },
+              {
+                step: "03",
+                title: "We Build",
+                desc: "Once you're happy, we design and develop the full solution — website, chatbot, or both.",
+              },
+              {
+                step: "04",
+                title: "Go Live",
+                desc: "You review, we refine, and we launch. Your business is now online and automated.",
+              },
+            ].map((item, i) => (
+              <AnimatedSection key={item.step} delay={i * 0.1}>
+                <div>
+                  <span className="text-4xl font-bold text-primary-100">
+                    {item.step}
+                  </span>
+                  <h3 className="text-lg font-semibold mt-3 mb-2">{item.title}</h3>
+                  <p className="text-surface-500 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Us */}
+      <section className="section-padding bg-white">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <p className="text-primary-600 text-sm font-medium uppercase tracking-widest mb-3">
+              Why IZG Solutions
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-surface-900 mb-14">
+              Built for businesses like yours.
+            </h2>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Clock,
+                title: "Fast Delivery",
+                desc: "Most projects delivered within 5 business days. No months of waiting.",
+              },
+              {
+                icon: Shield,
+                title: "You Own the Output",
+                desc: "Your website, your catalogues, your data. We retain the engine, you get the results.",
+              },
+              {
+                icon: Zap,
+                title: "Always Working",
+                desc: "Your chatbot doesn't sleep. Your website doesn't close. Customers are served 24/7.",
+              },
+            ].map((item, i) => (
+              <AnimatedSection key={item.title} delay={i * 0.1}>
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <item.icon className="text-primary-600" size={20} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">{item.title}</h3>
+                    <p className="text-surface-500 text-sm leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section-padding bg-gradient-to-br from-primary-600 to-primary-800">
+        <div className="container-narrow text-center">
+          <AnimatedSection>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to take your business online?
+            </h2>
+            <p className="text-primary-100 text-lg mb-8 max-w-xl mx-auto">
+              Let&apos;s talk about what you need. No pressure, no jargon — just
+              a conversation about how we can help.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-white text-primary-700 px-6 py-3 rounded-lg font-medium hover:bg-primary-50 transition-colors"
+            >
+              Get In Touch <ArrowRight size={18} />
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+    </>
   );
 }
