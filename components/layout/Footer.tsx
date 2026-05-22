@@ -33,7 +33,7 @@ export default function Footer() {
               Get In Touch
             </h4>
             <ul className="space-y-2 text-sm">
-              <li>makundat@gmail.com</li>
+              <li>info@izgsolutions.co.za</li>
               <li>+27 72 362 8397</li>
               <li>Centurion, Gauteng</li>
             </ul>

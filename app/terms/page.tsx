@@ -201,7 +201,7 @@ export default function TermsPage() {
               <div className="mt-2 bg-surface-50 rounded-lg p-4">
                 <p><strong>IZG Solutions (Pty) Ltd</strong></p>
                 <p>3320 Thornton Place, Blue Valley Golf Estate, Centurion, 0157</p>
-                <p>Email: makundat@gmail.com</p>
+                <p>Email: info@izgsolutions.co.za</p>
                 <p>Phone: +27 72 362 8397</p>
               </div>
             </section>

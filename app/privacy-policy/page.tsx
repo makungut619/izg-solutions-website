@@ -123,7 +123,7 @@ export default function PrivacyPolicyPage() {
                 <li>Lodge a complaint with the Information Regulator</li>
               </ul>
               <p className="mt-2">
-                To exercise any of these rights, contact us at makundat@gmail.com.
+                To exercise any of these rights, contact us at info@izgsolutions.co.za.
               </p>
             </section>
 
@@ -176,7 +176,7 @@ export default function PrivacyPolicyPage() {
               <div className="mt-2 bg-surface-50 rounded-lg p-4">
                 <p><strong>IZG Solutions (Pty) Ltd</strong></p>
                 <p>3320 Thornton Place, Blue Valley Golf Estate, Centurion, 0157</p>
-                <p>Email: makundat@gmail.com</p>
+                <p>Email: info@izgsolutions.co.za</p>
                 <p>Phone: +27 72 362 8397</p>
               </div>
             </section>

@@ -67,7 +67,7 @@ export default function ContactPage() {
                       <Mail className="text-primary-600 mt-0.5" size={18} />
                       <div>
                         <p className="text-sm text-surface-500">Email</p>
-                        <p className="text-sm font-medium">makundat@gmail.com</p>
+                        <p className="text-sm font-medium">info@izgsolutions.co.za</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
