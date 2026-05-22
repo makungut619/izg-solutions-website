@@ -1,7 +1,7 @@
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export const metadata = {
-  title: "Privacy Policy | IZG Solutions",
+  title: "Privacy Policy",
   description: "Privacy policy for IZG Solutions (Pty) Ltd.",
 };
 

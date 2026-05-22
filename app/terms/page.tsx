@@ -1,7 +1,7 @@
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export const metadata = {
-  title: "Terms & Conditions | IZG Solutions",
+  title: "Terms & Conditions",
   description: "Terms and conditions for IZG Solutions (Pty) Ltd services.",
 };
 

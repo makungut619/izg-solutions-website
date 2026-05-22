@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Pricing | IZG Solutions",
+  title: "Pricing",
   description:
     "Transparent pricing for websites, WhatsApp chatbots, and digital catalogues. See what fits your business and budget.",
 };

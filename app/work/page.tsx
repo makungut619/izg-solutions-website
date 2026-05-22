@@ -2,7 +2,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import { Globe, MessageCircle, FileText } from "lucide-react";
 
 export const metadata = {
-  title: "Our Work | IZG Solutions",
+  title: "Our Work",
   description:
     "See what we've built — websites, WhatsApp chatbots, and digital catalogues for real businesses.",
 };

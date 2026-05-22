@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Services | IZG Solutions",
+  title: "Services",
   description:
     "Professional websites, WhatsApp chatbot automation, and digital catalogue generation for small and medium businesses in South Africa.",
 };

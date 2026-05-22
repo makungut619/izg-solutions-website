@@ -12,17 +12,58 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "IZG Solutions | Your Business, Always On",
+  metadataBase: new URL("https://www.izgsolutions.co.za"),
+  title: {
+    default: "IZG Solutions | Your Business, Always On",
+    template: "%s | IZG Solutions",
+  },
   description:
-    "Professional websites and WhatsApp chatbot automation for small and medium businesses. We build your digital presence and automate customer engagement.",
+    "Professional websites and WhatsApp chatbot automation for small and medium businesses in South Africa. We build your digital presence and automate customer engagement 24/7.",
   keywords: [
     "website development",
+    "website development South Africa",
+    "website development Centurion",
     "WhatsApp chatbot",
-    "small business",
-    "South Africa",
+    "WhatsApp automation South Africa",
+    "small business website",
+    "business automation",
     "digital presence",
-    "automation",
+    "web design Gauteng",
+    "chatbot for business",
+    "digital catalogue",
+    "SME website",
   ],
+  authors: [{ name: "IZG Solutions" }],
+  creator: "IZG Solutions",
+  openGraph: {
+    type: "website",
+    locale: "en_ZA",
+    url: "https://www.izgsolutions.co.za",
+    siteName: "IZG Solutions",
+    title: "IZG Solutions | Your Business, Always On",
+    description:
+      "Professional websites and WhatsApp chatbot automation for small and medium businesses in South Africa.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IZG Solutions | Your Business, Always On",
+    description:
+      "Professional websites and WhatsApp chatbot automation for small and medium businesses in South Africa.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://www.izgsolutions.co.za",
+  },
 };
 
 export default function RootLayout({
@@ -30,8 +71,37 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "IZG Solutions",
+    url: "https://www.izgsolutions.co.za",
+    logo: "https://www.izgsolutions.co.za/opengraph-image",
+    description:
+      "Professional websites and WhatsApp chatbot automation for small and medium businesses in South Africa.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Centurion",
+      addressRegion: "Gauteng",
+      addressCountry: "ZA",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+27-72-362-8397",
+      contactType: "sales",
+      email: "info@izgsolutions.co.za",
+    },
+    sameAs: [],
+  };
+
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="font-sans">
         <Navbar />
         <main>{children}</main>

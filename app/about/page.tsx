@@ -2,7 +2,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import { Target, Users, Lightbulb } from "lucide-react";
 
 export const metadata = {
-  title: "About | IZG Solutions",
+  title: "About",
   description:
     "IZG Solutions helps small and medium businesses in South Africa establish a professional digital presence and automate customer engagement.",
 };
