@@ -28,7 +28,7 @@ function GateForm() {
       });
 
       if (res.ok) {
-        router.push(destination);
+        window.location.href = destination;
       } else {
         setError("Incorrect code. Try again.");
       }
