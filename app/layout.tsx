@@ -64,6 +64,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.izgsolutions.co.za",
   },
+  verification: {
+    google: "KdR8fn6bfbim5XSLxQ710pi-VIZFboFB5YGHBu1Totk",
+  },
 };
 
 export default function RootLayout({
