@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 
 const siteName = process.env.NEXT_PUBLIC_SITE_NAME || "This site";
@@ -11,7 +11,6 @@ function GateForm() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const searchParams = useSearchParams();
-  const router = useRouter();
 
   const destination = searchParams.get("next") || "/";
 

@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
     // Set cookie that lasts 12 hours
     response.cookies.set("preview_access", "granted", {
       httpOnly: true,
-      secure: true,
+      secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
       maxAge: 60 * 60 * 12, // 12 hours
     });
