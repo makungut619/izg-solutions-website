@@ -14,7 +14,7 @@ export default function TermsPage() {
             Terms &amp; Conditions
           </h1>
           <p className="text-surface-400 text-sm mb-10">
-            Last updated: 10 May 2026
+            Last updated: June 2026
           </p>
 
           <div className="prose prose-surface max-w-none space-y-8 text-surface-600 leading-relaxed text-sm">
@@ -29,7 +29,7 @@ export default function TermsPage() {
                 these terms.
               </p>
               <p className="mt-2">
-                IZG Solutions (Pty) Ltd (Reg. No: K2025205838) is a registered
+                IZG Solutions (Pty) Ltd (Reg. No: 2025/205838/07) is a registered
                 South African company providing website development, WhatsApp
                 chatbot automation, and digital catalogue services.
               </p>
@@ -55,7 +55,102 @@ export default function TermsPage() {
 
             <section>
               <h2 className="text-lg font-semibold text-surface-900 mb-3">
-                3. Quotations and Acceptance
+                3. Platform Services
+              </h2>
+              <p>
+                In addition to project-based deliverables, IZG Solutions provides
+                an ongoing hosted platform service (&quot;the Platform&quot;) that operates
+                WhatsApp chatbots on behalf of clients. The following terms apply
+                to Platform usage:
+              </p>
+              <ul className="list-disc pl-5 mt-2 space-y-1">
+                <li>The Platform is provided on a monthly subscription or per-agreement basis</li>
+                <li>IZG Solutions will use reasonable efforts to maintain Platform availability but does not guarantee 100% uptime</li>
+                <li>Planned maintenance will be communicated at least 24 hours in advance where possible</li>
+                <li>Force majeure events (including Meta API outages, Vercel incidents, or Supabase downtime) do not constitute a breach by IZG Solutions</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-lg font-semibold text-surface-900 mb-3">
+                4. Acceptable Use Policy
+              </h2>
+              <p>Clients must not use the Platform to:</p>
+              <ul className="list-disc pl-5 mt-2 space-y-1">
+                <li>Send unsolicited messages (spam) or messages without end-user consent</li>
+                <li>Send content that violates South African law, including hate speech, fraud, or illegal activity</li>
+                <li>Send content that violates Meta&apos;s WhatsApp Business Policy or Commerce Policy</li>
+                <li>Impersonate another business or individual</li>
+                <li>Collect or store end-customer data in violation of POPIA</li>
+                <li>Exceed WhatsApp messaging limits or abuse Meta&apos;s API</li>
+              </ul>
+              <p className="mt-2">
+                IZG Solutions reserves the right to suspend or terminate Platform
+                access immediately if a client violates this policy.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-lg font-semibold text-surface-900 mb-3">
+                5. Meta/WhatsApp Compliance
+              </h2>
+              <p>Clients acknowledge and agree that:</p>
+              <ul className="list-disc pl-5 mt-2 space-y-1">
+                <li>Their use of WhatsApp messaging through the Platform is subject to Meta&apos;s WhatsApp Business Terms of Service</li>
+                <li>They must comply with Meta&apos;s Business Messaging Policy and Commerce Policy at all times</li>
+                <li>Message templates submitted for approval must comply with Meta&apos;s template guidelines</li>
+                <li>IZG Solutions is not responsible for Meta&apos;s decisions to reject templates, restrict messaging, or modify API functionality</li>
+                <li>Changes to Meta&apos;s policies or API may require changes to the client&apos;s chatbot flow, which may incur additional fees</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-lg font-semibold text-surface-900 mb-3">
+                6. Client Data Ownership and Processing
+              </h2>
+              <p>
+                The client retains ownership of all end-customer data processed
+                through the Platform. IZG Solutions processes this data solely on
+                the client&apos;s behalf and in accordance with the client&apos;s
+                instructions.
+              </p>
+              <p className="mt-2">
+                The client is the Responsible Party (data controller) under POPIA
+                for their end-customers&apos; personal information. IZG Solutions acts
+                as an Operator (data processor).
+              </p>
+              <p className="mt-2">The client is responsible for:</p>
+              <ul className="list-disc pl-5 mt-2 space-y-1">
+                <li>Obtaining any necessary consent from end-customers before engaging them via WhatsApp</li>
+                <li>Ensuring their chatbot flows comply with POPIA</li>
+                <li>Responding to data subject access requests from their end-customers</li>
+              </ul>
+              <p className="mt-2">
+                IZG Solutions will assist the client in responding to data subject
+                requests to the extent technically feasible.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-lg font-semibold text-surface-900 mb-3">
+                7. WhatsApp Messaging Costs
+              </h2>
+              <p>
+                WhatsApp conversations are billed by Meta per conversation
+                (24-hour window). The responsibility for these costs will be
+                specified in the client&apos;s service agreement. Unless otherwise
+                agreed:
+              </p>
+              <ul className="list-disc pl-5 mt-2 space-y-1">
+                <li>Meta conversation charges are passed through to the client at cost</li>
+                <li>IZG Solutions will provide monthly usage reports</li>
+                <li>The client is responsible for managing their messaging volume within agreed limits</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-lg font-semibold text-surface-900 mb-3">
+                8. Quotations and Acceptance
               </h2>
               <ul className="list-disc pl-5 space-y-1">
                 <li>All quotations are valid for 7 days from date of issue unless otherwise stated.</li>
@@ -67,19 +162,19 @@ export default function TermsPage() {
 
             <section>
               <h2 className="text-lg font-semibold text-surface-900 mb-3">
-                4. Payment Terms
+                9. Payment Terms
               </h2>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Payment terms are specified in the project quotation.</li>
+                <li>Payment terms are specified in the project quotation or service agreement.</li>
                 <li>Invoices are due within 7 days of issue.</li>
                 <li>A late payment fee of 5% of the outstanding amount will be applied for every 14 days overdue.</li>
-                <li>IZG Solutions reserves the right to suspend or withhold deliverables until outstanding payments are settled.</li>
+                <li>IZG Solutions reserves the right to suspend or withhold deliverables and Platform access until outstanding payments are settled.</li>
               </ul>
             </section>
 
             <section>
               <h2 className="text-lg font-semibold text-surface-900 mb-3">
-                5. Delivery and Timelines
+                10. Delivery and Timelines
               </h2>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Delivery timelines begin from the date all required content and assets are received from the client.</li>
@@ -90,7 +185,7 @@ export default function TermsPage() {
 
             <section>
               <h2 className="text-lg font-semibold text-surface-900 mb-3">
-                6. Revisions
+                11. Revisions
               </h2>
               <ul className="list-disc pl-5 space-y-1">
                 <li>2 rounds of revisions are included in the quoted price.</li>
@@ -101,7 +196,7 @@ export default function TermsPage() {
 
             <section>
               <h2 className="text-lg font-semibold text-surface-900 mb-3">
-                7. Intellectual Property
+                12. Intellectual Property
               </h2>
               <ul className="list-disc pl-5 space-y-1">
                 <li>IZG Solutions retains ownership of all underlying source code, templates, engines, and systems used to deliver projects.</li>
@@ -113,7 +208,29 @@ export default function TermsPage() {
 
             <section>
               <h2 className="text-lg font-semibold text-surface-900 mb-3">
-                8. Cancellation
+                13. Suspension and Termination
+              </h2>
+              <p>
+                IZG Solutions may suspend or terminate Platform access immediately
+                and without notice if:
+              </p>
+              <ul className="list-disc pl-5 mt-2 space-y-1">
+                <li>The client breaches the Acceptable Use Policy</li>
+                <li>The client&apos;s use of the Platform results in action by Meta against IZG Solutions&apos; WhatsApp Business Account or App</li>
+                <li>The client fails to pay fees for more than 30 days</li>
+                <li>Continued service would expose IZG Solutions to legal liability</li>
+              </ul>
+              <p className="mt-2">
+                Upon termination, IZG Solutions will provide the client with an
+                export of their chatbot flow configuration within 14 days.
+                End-customer conversation data will be deleted within 30 days of
+                termination.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-lg font-semibold text-surface-900 mb-3">
+                14. Cancellation
               </h2>
               <ul className="list-disc pl-5 space-y-1">
                 <li>If the client cancels a project after the agreement is signed, the deposit is non-refundable.</li>
@@ -124,7 +241,7 @@ export default function TermsPage() {
 
             <section>
               <h2 className="text-lg font-semibold text-surface-900 mb-3">
-                9. Confidentiality
+                15. Confidentiality
               </h2>
               <p>
                 Both parties agree to keep confidential any business information,
@@ -135,18 +252,18 @@ export default function TermsPage() {
 
             <section>
               <h2 className="text-lg font-semibold text-surface-900 mb-3">
-                10. Limitation of Liability
+                16. Limitation of Liability
               </h2>
               <ul className="list-disc pl-5 space-y-1">
-                <li>IZG Solutions will not be liable for any indirect, incidental, or consequential damages arising from the use of our services or website.</li>
-                <li>Our total liability for any claim shall not exceed the total amount paid by the client for the specific project in question.</li>
+                <li>IZG Solutions will not be liable for any indirect, incidental, or consequential damages arising from the use of our services, Platform, or website.</li>
+                <li>Our total liability for any claim shall not exceed the total amount paid by the client for the specific project or 3 months of Platform fees, whichever is greater.</li>
                 <li>We do not guarantee specific business outcomes (e.g., increased sales, leads, or traffic) as a result of our services.</li>
               </ul>
             </section>
 
             <section>
               <h2 className="text-lg font-semibold text-surface-900 mb-3">
-                11. Website Use
+                17. Website Use
               </h2>
               <p>By using this website, you agree to:</p>
               <ul className="list-disc pl-5 mt-2 space-y-1">
@@ -159,7 +276,7 @@ export default function TermsPage() {
 
             <section>
               <h2 className="text-lg font-semibold text-surface-900 mb-3">
-                12. Third-Party Links
+                18. Third-Party Links
               </h2>
               <p>
                 Our website may contain links to third-party websites. We are not
@@ -170,7 +287,7 @@ export default function TermsPage() {
 
             <section>
               <h2 className="text-lg font-semibold text-surface-900 mb-3">
-                13. Governing Law
+                19. Governing Law
               </h2>
               <p>
                 These Terms and Conditions are governed by the laws of the
@@ -181,7 +298,7 @@ export default function TermsPage() {
 
             <section>
               <h2 className="text-lg font-semibold text-surface-900 mb-3">
-                14. Changes to These Terms
+                20. Changes to These Terms
               </h2>
               <p>
                 We reserve the right to update these Terms and Conditions at any
@@ -193,7 +310,7 @@ export default function TermsPage() {
 
             <section>
               <h2 className="text-lg font-semibold text-surface-900 mb-3">
-                15. Contact
+                21. Contact
               </h2>
               <p>
                 For questions about these Terms and Conditions, contact us at:

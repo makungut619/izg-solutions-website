@@ -21,7 +21,14 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-surface-100">
       <nav className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-2">
-          <BulldogLogo size={44} />
+          <div className="-my-4 md:-my-6">
+            <span className="block md:hidden">
+              <BulldogLogo size={60} />
+            </span>
+            <span className="hidden md:block">
+              <BulldogLogo size={93} />
+            </span>
+          </div>
           <span className="text-xl font-bold text-surface-900 tracking-tight">
             IZG Solutions
           </span>
