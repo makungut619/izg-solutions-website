@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CookieConsent from "@/components/ui/CookieConsent";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
@@ -109,6 +110,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <WhatsAppButton />
         <CookieConsent />
         <Analytics />
       </body>

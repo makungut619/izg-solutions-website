@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { getWhatsAppUrl } from "@/components/ui/WhatsAppButton";
+import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -82,6 +83,20 @@ export default function ContactPage() {
                       <div>
                         <p className="text-sm text-surface-500">Location</p>
                         <p className="text-sm font-medium">Centurion, Gauteng</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <MessageCircle className="text-[#25D366] mt-0.5" size={18} />
+                      <div>
+                        <p className="text-sm text-surface-500">WhatsApp</p>
+                        <a
+                          href={getWhatsAppUrl()}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm font-medium text-primary-600 hover:text-primary-700 transition-colors"
+                        >
+                          Chat with us instantly
+                        </a>
                       </div>
                     </div>
                   </div>
