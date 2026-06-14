@@ -383,7 +383,7 @@ export default function PrivacyPolicyPage() {
                 <p><strong>IZG Solutions (Pty) Ltd</strong></p>
                 <p>3320 Thornton Place, Blue Valley Golf Estate, Centurion, 0157</p>
                 <p>Email: info@izgsolutions.co.za</p>
-                <p>Phone: +27 72 362 8397</p>
+                <p>Phone: +27 72 724 0551</p>
               </div>
             </section>
           </div>

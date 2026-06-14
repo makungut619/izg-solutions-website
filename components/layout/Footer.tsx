@@ -34,7 +34,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm">
               <li>info@izgsolutions.co.za</li>
-              <li>+27 72 362 8397</li>
+              <li>+27 72 724 0551</li>
               <li>Centurion, Gauteng</li>
             </ul>
           </div>
