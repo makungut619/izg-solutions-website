@@ -143,7 +143,7 @@ const websiteMonthlyPlans = [
 const chatbotMonthlyPlans = [
   {
     name: "Starter",
-    price: "R500",
+    price: "R350",
     features: [
       "Platform hosting",
       "Up to 500 conversations/month",
@@ -153,7 +153,7 @@ const chatbotMonthlyPlans = [
   },
   {
     name: "Growth",
-    price: "R1,200",
+    price: "R750",
     features: [
       "Everything in Starter",
       "Up to 2,000 conversations/month",
@@ -164,7 +164,7 @@ const chatbotMonthlyPlans = [
   },
   {
     name: "Business",
-    price: "R2,500",
+    price: "R1,200",
     features: [
       "Everything in Growth",
       "Unlimited conversations",
