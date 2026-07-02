@@ -3,6 +3,47 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+/**
+ * Fire-and-forget: send lead data to the IZG Admin Console.
+ * Never blocks the user response — errors are logged silently.
+ */
+function submitLead(payload: {
+  contact_name?: string;
+  contact_email?: string;
+  contact_phone?: string;
+  what_they_need?: string;
+  notes?: string;
+}) {
+  const leadsApiUrl = process.env.LEADS_API_URL;
+  const leadsApiKey = process.env.LEADS_API_KEY;
+
+  if (!leadsApiUrl || !leadsApiKey) {
+    console.warn("Leads API not configured — skipping lead submission");
+    return;
+  }
+
+  fetch(`${leadsApiUrl}/api/leads`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": leadsApiKey,
+    },
+    body: JSON.stringify({
+      source: "website_form",
+      ...payload,
+    }),
+  })
+    .then(async (res) => {
+      if (!res.ok) {
+        const body = await res.text();
+        console.error(`Leads API error (${res.status}):`, body);
+      }
+    })
+    .catch((err) => {
+      console.error("Leads API request failed:", err);
+    });
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -12,9 +53,24 @@ export async function POST(request: NextRequest) {
     const isProduction = appEnv === "production";
     const subjectPrefix = isProduction ? "" : `[${appEnv.toUpperCase()}] `;
 
+    // Always submit lead regardless of email outcome
+    submitLead({
+      contact_name: name,
+      contact_email: email,
+      contact_phone: phone || undefined,
+      what_they_need: service || "General enquiry",
+      notes: message,
+    });
+
+    // Build recipient list — add test recipients in non-production environments
+    const recipients: string[] = [process.env.EMAIL_TO!];
+    if (!isProduction) {
+      recipients.push("accadimo@gmail.com", "makgamathampho@gmail.com");
+    }
+
     const { data, error } = await resend.emails.send({
       from: process.env.EMAIL_FROM!,
-      to: process.env.EMAIL_TO!,
+      to: recipients,
       replyTo: email,
       subject: `${subjectPrefix}New Contact: ${name} — ${service || "General enquiry"}`,
       html: `
