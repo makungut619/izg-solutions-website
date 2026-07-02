@@ -72,7 +72,7 @@ export async function POST(request: NextRequest) {
       from: process.env.EMAIL_FROM!,
       to: recipients,
       replyTo: email,
-      subject: `${subjectPrefix}New Contact: ${name} — ${service || "General enquiry"}`,
+      subject: `${subjectPrefix}New Contact: ${name} - ${service || "General enquiry"}`,
       html: `
         ${!isProduction ? `<p style="background: #fef3c7; padding: 8px 12px; border-radius: 4px; font-size: 12px; color: #92400e;"><strong>Environment:</strong> ${appEnv.toUpperCase()}</p>` : ""}
         <h2 style="margin-top: 16px;">New Contact Form Submission</h2>

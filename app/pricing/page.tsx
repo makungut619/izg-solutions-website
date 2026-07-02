@@ -198,20 +198,22 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Websites */}
+      {/* Chatbots */}
       <section className="section-padding bg-white">
         <div className="container-narrow">
           <AnimatedSection>
             <div className="flex items-center gap-3 mb-8">
               <div className="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center">
-                <Globe className="text-primary-600" size={20} />
+                <MessageCircle className="text-primary-600" size={20} />
               </div>
-              <h2 className="text-2xl font-bold text-surface-900">Websites</h2>
+              <h2 className="text-2xl font-bold text-surface-900">
+                WhatsApp Chatbots
+              </h2>
             </div>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {websiteTiers.map((tier, i) => (
+            {chatbotTiers.map((tier, i) => (
               <AnimatedSection key={tier.name} delay={i * 0.1}>
                 <div
                   className={`relative p-7 rounded-2xl border h-full flex flex-col ${
@@ -258,22 +260,20 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Chatbots */}
+      {/* Websites */}
       <section className="section-padding bg-surface-50">
         <div className="container-narrow">
           <AnimatedSection>
             <div className="flex items-center gap-3 mb-8">
               <div className="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center">
-                <MessageCircle className="text-primary-600" size={20} />
+                <Globe className="text-primary-600" size={20} />
               </div>
-              <h2 className="text-2xl font-bold text-surface-900">
-                WhatsApp Chatbots
-              </h2>
+              <h2 className="text-2xl font-bold text-surface-900">Websites</h2>
             </div>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {chatbotTiers.map((tier, i) => (
+            {websiteTiers.map((tier, i) => (
               <AnimatedSection key={tier.name} delay={i * 0.1}>
                 <div
                   className={`relative p-7 rounded-2xl border bg-white h-full flex flex-col ${
@@ -343,7 +343,7 @@ export default function PricingPage() {
                   </span>
                 </div>
                 <p className="text-sm text-surface-500 mb-5">
-                  Professional PDF product catalogues — branded, structured, and
+                  Professional PDF product catalogues. Branded, structured, and
                   ready to share. Price depends on number of products and
                   catalogue variations needed.
                 </p>
@@ -387,23 +387,23 @@ export default function PricingPage() {
             </p>
           </AnimatedSection>
 
-          {/* Website Monthly */}
+          {/* Chatbot Monthly */}
           <AnimatedSection>
             <div className="flex items-center gap-3 mb-2">
               <div className="w-8 h-8 bg-primary-50 rounded-lg flex items-center justify-center">
-                <Globe className="text-primary-600" size={16} />
+                <MessageCircle className="text-primary-600" size={16} />
               </div>
               <h3 className="text-lg font-semibold text-surface-900">
-                Website Hosting &amp; Maintenance
+                Chatbot Hosting &amp; Operations
               </h3>
             </div>
             <p className="text-surface-400 text-sm mb-6 ml-11">
-              Optional — but recommended to keep your site updated and monitored.
+              Required. Your chatbot runs on our platform and needs ongoing hosting and monitoring.
             </p>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
-            {websiteMonthlyPlans.map((plan, i) => (
+            {chatbotMonthlyPlans.map((plan, i) => (
               <AnimatedSection key={plan.name} delay={i * 0.1}>
                 <div className="p-6 rounded-2xl border border-surface-100 bg-white h-full flex flex-col">
                   <h3 className="font-semibold mb-1">{plan.name}</h3>
@@ -432,23 +432,23 @@ export default function PricingPage() {
             ))}
           </div>
 
-          {/* Chatbot Monthly */}
+          {/* Website Monthly */}
           <AnimatedSection>
             <div className="flex items-center gap-3 mb-2">
               <div className="w-8 h-8 bg-primary-50 rounded-lg flex items-center justify-center">
-                <MessageCircle className="text-primary-600" size={16} />
+                <Globe className="text-primary-600" size={16} />
               </div>
               <h3 className="text-lg font-semibold text-surface-900">
-                Chatbot Hosting &amp; Operations
+                Website Hosting &amp; Maintenance
               </h3>
             </div>
             <p className="text-surface-400 text-sm mb-6 ml-11">
-              Required — your chatbot runs on our platform and needs ongoing hosting and monitoring.
+              Optional, but recommended to keep your site updated and monitored.
             </p>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {chatbotMonthlyPlans.map((plan, i) => (
+            {websiteMonthlyPlans.map((plan, i) => (
               <AnimatedSection key={plan.name} delay={i * 0.1}>
                 <div className="p-6 rounded-2xl border border-surface-100 bg-white h-full flex flex-col">
                   <h3 className="font-semibold mb-1">{plan.name}</h3>
@@ -497,7 +497,7 @@ export default function PricingPage() {
               {[
                 {
                   q: "Are these exact prices?",
-                  a: "These are starting prices. Your exact quote depends on the scope of your project — number of pages, complexity of flows, amount of content, etc. We'll give you a clear quote before any work begins.",
+                  a: "These are starting prices. Your exact quote depends on the scope of your project: number of pages, complexity of flows, amount of content, etc. We'll give you a clear quote before any work begins.",
                 },
                 {
                   q: "What about payment?",
@@ -505,7 +505,7 @@ export default function PricingPage() {
                 },
                 {
                   q: "How long does delivery take?",
-                  a: "Websites are typically delivered within 5 business days from when we receive all your content. WhatsApp chatbots depend on Meta's verification and approval process, which can take longer — we'll give you a realistic timeline upfront based on your setup status.",
+                  a: "Websites are typically delivered within 5 business days from when we receive all your content. WhatsApp chatbots depend on Meta's verification and approval process, which can take longer. We'll give you a realistic timeline upfront based on your setup status.",
                 },
                 {
                   q: "What if I need changes after delivery?",
@@ -513,11 +513,11 @@ export default function PricingPage() {
                 },
                 {
                   q: "Is the monthly plan mandatory?",
-                  a: "For websites, it's optional but recommended. For WhatsApp chatbots, yes — your bot runs on our platform and requires ongoing hosting, monitoring, and Meta API access to function.",
+                  a: "For websites, it's optional but recommended. For WhatsApp chatbots, yes. Your bot runs on our platform and requires ongoing hosting, monitoring, and Meta API access to function.",
                 },
                 {
                   q: "Can I get a website AND a chatbot?",
-                  a: "Absolutely — and they work best together. We offer bundle pricing when you take both services. Get in touch and we'll put together a package.",
+                  a: "Absolutely, and they work best together. We offer bundle pricing when you take both services. Get in touch and we'll put together a package.",
                 },
               ].map((item) => (
                 <div key={item.q} className="border-b border-surface-100 pb-5">
@@ -543,7 +543,7 @@ export default function PricingPage() {
             </h2>
             <p className="text-primary-100 text-lg mb-8 max-w-xl mx-auto">
               Tell us about your business and we&apos;ll recommend the right
-              solution — with a clear quote, no obligations.
+              solution, with a clear quote, no obligations.
             </p>
             <Link
               href="/contact"

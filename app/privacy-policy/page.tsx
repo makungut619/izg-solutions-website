@@ -110,12 +110,12 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul className="list-disc pl-5 mt-2 space-y-1">
                 <li>
-                  <strong>whatsapp_business_messaging</strong> — to send and
+                  <strong>whatsapp_business_messaging</strong>: to send and
                   receive WhatsApp messages on behalf of connected client
                   businesses
                 </li>
                 <li>
-                  <strong>whatsapp_business_management</strong> — to manage
+                  <strong>whatsapp_business_management</strong>: to manage
                   WhatsApp Business Account details, phone number registration,
                   and message templates
                 </li>
@@ -193,12 +193,12 @@ export default function PrivacyPolicyPage() {
                   <tbody>
                     <tr className="border-b border-surface-100">
                       <td className="py-2 pr-4">Meta Platforms, Inc.</td>
-                      <td className="py-2 pr-4">WhatsApp Business Cloud API — sending and receiving messages</td>
+                      <td className="py-2 pr-4">WhatsApp Business Cloud API, sending and receiving messages</td>
                       <td className="py-2 pr-4">United States</td>
                     </tr>
                     <tr className="border-b border-surface-100">
                       <td className="py-2 pr-4">Supabase, Inc.</td>
-                      <td className="py-2 pr-4">Cloud database — stores sessions, messages, and customer records</td>
+                      <td className="py-2 pr-4">Cloud database, stores sessions, messages, and customer records</td>
                       <td className="py-2 pr-4">EU (Ireland)</td>
                     </tr>
                     <tr className="border-b border-surface-100">

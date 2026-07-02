@@ -27,7 +27,7 @@ export default function ContactPage() {
         setSubmitted(true);
       }
     } catch {
-      // Still show success to the user — we'll see the error in logs
+      // Still show success to the user, we'll see the error in logs
       setSubmitted(true);
     }
   }
@@ -45,7 +45,7 @@ export default function ContactPage() {
               Let&apos;s talk about your business.
             </h1>
             <p className="text-lg text-surface-500 max-w-2xl leading-relaxed">
-              Tell us what you need — a website, a chatbot, or both. No
+              Tell us what you need, a website, a chatbot, or both. No
               pressure, no jargon. Just a conversation about how we can help.
             </p>
           </AnimatedSection>

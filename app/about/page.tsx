@@ -41,7 +41,7 @@ export default function AboutPage() {
                 <p>
                   Small businesses in South Africa are expected to have a
                   professional online presence, respond to customers instantly,
-                  and compete with larger companies — all while running their
+                  and compete with larger companies, all while running their
                   actual business.
                 </p>
                 <p>
@@ -53,7 +53,7 @@ export default function AboutPage() {
                 <p>
                   We built IZG Solutions to close that gap. We give small
                   businesses the digital tools that used to be reserved for
-                  companies with big budgets — professional websites that attract
+                  companies with big budgets: professional websites that attract
                   customers, and WhatsApp automation that serves them.
                 </p>
               </div>
@@ -102,7 +102,7 @@ export default function AboutPage() {
               {
                 icon: Target,
                 title: "Practical over perfect",
-                desc: "We build things that work and deliver value now — not theoretical solutions that take forever to ship.",
+                desc: "We build things that work and deliver value now, not theoretical solutions that take forever to ship.",
               },
               {
                 icon: Users,

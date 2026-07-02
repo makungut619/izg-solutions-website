@@ -4,7 +4,7 @@ import { Globe, MessageCircle, FileText } from "lucide-react";
 export const metadata = {
   title: "Our Work",
   description:
-    "See what we've built — websites, WhatsApp chatbots, and digital catalogues for real businesses.",
+    "See what we've built. Websites, WhatsApp chatbots, and digital catalogues for real businesses.",
 };
 
 const projects = [
@@ -38,7 +38,7 @@ const projects = [
     icon: MessageCircle,
     industry: "Healthcare",
     description:
-      "Automated appointment booking via WhatsApp. Patients select location, preferred time, booking type, and optionally capture medical aid details — all through a guided conversation flow.",
+      "Automated appointment booking via WhatsApp. Patients select location, preferred time, booking type, and optionally capture medical aid details, all through a guided conversation flow.",
   },
   {
     title: "XYZ Restaurant",
@@ -73,7 +73,7 @@ export default function WorkPage() {
             </h1>
             <p className="text-lg text-surface-500 max-w-2xl leading-relaxed">
               Here&apos;s a selection of what we&apos;ve built. Each project
-              solves a specific business problem — from online presence to
+              solves a specific business problem, from online presence to
               automated customer engagement.
             </p>
           </AnimatedSection>

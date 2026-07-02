@@ -57,7 +57,7 @@ export default function ServicesPage() {
             <p className="text-surface-500 text-lg max-w-3xl mb-10 leading-relaxed">
               Modern, mobile-first websites that make your business look
               credible, rank on Google, and convert visitors into customers. We
-              build fast using proven templates — so you get premium quality
+              build fast using proven templates so you get premium quality
               without the premium timeline.
             </p>
           </AnimatedSection>
@@ -67,7 +67,7 @@ export default function ServicesPage() {
               {
                 icon: Briefcase,
                 title: "Trade & Contractor Sites",
-                desc: "For electricians, plumbers, builders, roofers — dark industrial aesthetic with project galleries and quote request forms.",
+                desc: "For electricians, plumbers, builders, roofers. Dark industrial aesthetic with project galleries and quote request forms.",
               },
               {
                 icon: ShoppingCart,
@@ -82,32 +82,32 @@ export default function ServicesPage() {
               {
                 icon: Palette,
                 title: "Professional Services",
-                desc: "For consultants, lawyers, accountants, financial advisors — clean, trustworthy design that builds credibility.",
+                desc: "For consultants, lawyers, accountants, financial advisors. Clean, trustworthy design that builds credibility.",
               },
               {
                 icon: Globe,
                 title: "Health & Beauty",
-                desc: "For salons, spas, clinics, wellness practitioners — elegant design with booking integration and service showcases.",
+                desc: "For salons, spas, clinics, wellness practitioners. Elegant design with booking integration and service showcases.",
               },
               {
                 icon: Globe,
                 title: "Real Estate & Property",
-                desc: "For agents, developers, and property managers — listing displays, virtual tours, and lead capture.",
+                desc: "For agents, developers, and property managers. Listing displays, virtual tours, and lead capture.",
               },
               {
                 icon: Globe,
                 title: "Education & Training",
-                desc: "For tutors, training providers, and schools — course listings, timetables, and enquiry forms.",
+                desc: "For tutors, training providers, and schools. Course listings, timetables, and enquiry forms.",
               },
               {
                 icon: Globe,
                 title: "Events & Entertainment",
-                desc: "For DJs, photographers, event planners, venues — portfolio galleries, booking forms, and package displays.",
+                desc: "For DJs, photographers, event planners, venues. Portfolio galleries, booking forms, and package displays.",
               },
               {
                 icon: Globe,
                 title: "Automotive & Transport",
-                desc: "For mechanics, car washes, logistics companies — service listings, quote requests, and fleet showcases.",
+                desc: "For mechanics, car washes, logistics companies. Service listings, quote requests, and fleet showcases.",
               },
             ].map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.1}>
@@ -164,7 +164,7 @@ export default function ServicesPage() {
             </div>
             <p className="text-surface-500 text-lg max-w-3xl mb-10 leading-relaxed">
               Give your business a WhatsApp number that acts as a smart
-              receptionist — taking orders, booking appointments, answering
+              receptionist, taking orders, booking appointments, answering
               questions, and capturing customer details. Without you needing to
               be online 24/7.
             </p>
@@ -175,12 +175,12 @@ export default function ServicesPage() {
               {
                 icon: Calendar,
                 title: "Appointment Booking",
-                desc: "Customers book appointments through WhatsApp — select service, choose time, provide details. All automated.",
+                desc: "Customers book appointments through WhatsApp. Select service, choose time, provide details. All automated.",
               },
               {
                 icon: Utensils,
                 title: "Food & Product Ordering",
-                desc: "Browse catalogue, add to cart, provide delivery details, confirm order — all within WhatsApp.",
+                desc: "Browse catalogue, add to cart, provide delivery details, confirm order. All within WhatsApp.",
               },
               {
                 icon: Smartphone,
@@ -190,12 +190,12 @@ export default function ServicesPage() {
               {
                 icon: BarChart3,
                 title: "Marketing & Promotions",
-                desc: "Send promotional templates to your customer base — new products, specials, announcements.",
+                desc: "Send promotional templates to your customer base. New products, specials, announcements.",
               },
               {
                 icon: Globe,
                 title: "Quote Requests",
-                desc: "Customers describe what they need, provide details and images, and receive a quote — all via WhatsApp.",
+                desc: "Customers describe what they need, provide details and images, and receive a quote, all via WhatsApp.",
               },
               {
                 icon: Globe,
@@ -255,7 +255,7 @@ export default function ServicesPage() {
             <p className="text-surface-500 text-lg max-w-3xl mb-10 leading-relaxed">
               Professional PDF product catalogues your team can share instantly
               via WhatsApp, email, or print. We take your product data and images
-              and turn them into branded, structured catalogues — segmented
+              and turn them into branded, structured catalogues, segmented
               however you need.
             </p>
           </AnimatedSection>
@@ -270,12 +270,12 @@ export default function ServicesPage() {
               {
                 icon: Search,
                 title: "Smart Segmentation",
-                desc: "Split catalogues by category, season, gender, price range — whatever makes sense for your business.",
+                desc: "Split catalogues by category, season, gender, price range, whatever makes sense for your business.",
               },
               {
                 icon: Globe,
                 title: "Future-Ready Data",
-                desc: "The product data we structure feeds directly into a future website or online store — no rework needed.",
+                desc: "The product data we structure feeds directly into a future website or online store. No rework needed.",
               },
             ].map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.1}>

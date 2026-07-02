@@ -60,7 +60,7 @@ export default function Home() {
             </h2>
             <p className="text-surface-500 max-w-2xl mb-14 text-lg">
               We give small and medium businesses the digital capability of much
-              larger operations — without the overhead.
+              larger operations, without the overhead.
             </p>
           </AnimatedSection>
 
@@ -86,7 +86,7 @@ export default function Home() {
                 <h3 className="text-lg font-semibold mb-3">WhatsApp Automation</h3>
                 <p className="text-surface-500 text-sm leading-relaxed">
                   Automated WhatsApp assistants that take orders, book
-                  appointments, answer questions, and capture leads — 24/7.
+                  appointments, answer questions, and capture leads, 24/7.
                 </p>
               </div>
             </AnimatedSection>
@@ -99,7 +99,7 @@ export default function Home() {
                 <h3 className="text-lg font-semibold mb-3">Digital Catalogues</h3>
                 <p className="text-surface-500 text-sm leading-relaxed">
                   Professional PDF product catalogues your team can share
-                  instantly — branded, structured, and print-ready.
+                  instantly. Branded, structured, and print-ready.
                 </p>
               </div>
             </AnimatedSection>
@@ -129,12 +129,12 @@ export default function Home() {
               {
                 step: "02",
                 title: "We Demo",
-                desc: "We build a quick preview so you can see how your solution will look and feel — before you commit.",
+                desc: "We build a quick preview so you can see how your solution will look and feel before you commit.",
               },
               {
                 step: "03",
                 title: "We Build",
-                desc: "Once you're happy, we design and develop the full solution — website, chatbot, or both.",
+                desc: "Once you're happy, we design and develop the full solution. Website, chatbot, or both.",
               },
               {
                 step: "04",
@@ -214,7 +214,7 @@ export default function Home() {
               Ready to take your business online?
             </h2>
             <p className="text-primary-100 text-lg mb-8 max-w-xl mx-auto">
-              Let&apos;s talk about what you need. No pressure, no jargon — just
+              Let&apos;s talk about what you need. No pressure, no jargon, just
               a conversation about how we can help.
             </p>
             <Link
