@@ -57,6 +57,7 @@ export async function POST(request: NextRequest) {
     const subjectPrefix = isProduction ? "" : `[${appEnv.toUpperCase()}] `;
 
     // Submit lead before sending email
+    console.log("Attempting lead submission...");
     await submitLead({
       contact_name: name,
       contact_email: email,
