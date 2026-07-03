@@ -199,8 +199,8 @@ export default function TermsPage() {
                 12. Intellectual Property
               </h2>
               <ul className="list-disc pl-5 space-y-1">
-                <li>IZG Solutions retains ownership of all underlying source code, templates, engines, and systems used to deliver projects.</li>
-                <li>Upon full payment, the client receives a perpetual, non-exclusive licence to use the final delivered output (website, chatbot configuration, catalogues) for their business purposes.</li>
+                <li>Custom content, copy, and design assets created for the client belong to the client upon full payment.</li>
+                <li>Source code and technical infrastructure (platforms, engines, templates, and systems) remain the property of IZG Solutions, provided as part of the hosting arrangement.</li>
                 <li>The client may not resell, redistribute, sublicense, or reverse-engineer the underlying systems.</li>
                 <li>Content provided by the client (text, images, logos) remains the property of the client.</li>
               </ul>
@@ -221,10 +221,11 @@ export default function TermsPage() {
                 <li>Continued service would expose IZG Solutions to legal liability</li>
               </ul>
               <p className="mt-2">
-                Upon termination, IZG Solutions will provide the client with an
-                export of their chatbot flow configuration within 14 days.
-                End-customer conversation data will be deleted within 30 days of
-                termination.
+                All business data (enquiries, contact submissions, analytics, and
+                chatbot flow configuration) belongs to the client and will be
+                provided on request if the engagement ends. End-customer
+                conversation data will be deleted within 30 days of termination
+                unless otherwise requested by the client.
               </p>
             </section>
 
