@@ -4,10 +4,11 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 /**
- * Fire-and-forget: send lead data to the IZG Admin Console.
- * Never blocks the user response — errors are logged silently.
+ * Submit lead data to the IZG Admin Console.
+ * Awaited so it completes before the serverless function exits.
+ * Errors are logged but never block the user response.
  */
-function submitLead(payload: {
+async function submitLead(payload: {
   contact_name?: string;
   contact_email?: string;
   contact_phone?: string;
@@ -18,30 +19,32 @@ function submitLead(payload: {
   const leadsApiKey = process.env.LEADS_API_KEY;
 
   if (!leadsApiUrl || !leadsApiKey) {
-    console.warn("Leads API not configured — skipping lead submission");
+    console.warn("Leads API not configured, skipping lead submission");
     return;
   }
 
-  fetch(`${leadsApiUrl}/api/leads`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": leadsApiKey,
-    },
-    body: JSON.stringify({
-      source: "website_form",
-      ...payload,
-    }),
-  })
-    .then(async (res) => {
-      if (!res.ok) {
-        const body = await res.text();
-        console.error(`Leads API error (${res.status}):`, body);
-      }
-    })
-    .catch((err) => {
-      console.error("Leads API request failed:", err);
+  try {
+    const res = await fetch(`${leadsApiUrl}/api/leads`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": leadsApiKey,
+      },
+      body: JSON.stringify({
+        source: "website_form",
+        ...payload,
+      }),
     });
+
+    if (!res.ok) {
+      const body = await res.text();
+      console.error(`Leads API error (${res.status}):`, body);
+    } else {
+      console.log("Lead submitted successfully");
+    }
+  } catch (err) {
+    console.error("Leads API request failed:", err);
+  }
 }
 
 export async function POST(request: NextRequest) {
@@ -53,8 +56,8 @@ export async function POST(request: NextRequest) {
     const isProduction = appEnv === "production";
     const subjectPrefix = isProduction ? "" : `[${appEnv.toUpperCase()}] `;
 
-    // Always submit lead regardless of email outcome
-    submitLead({
+    // Submit lead before sending email
+    await submitLead({
       contact_name: name,
       contact_email: email,
       contact_phone: phone || undefined,
