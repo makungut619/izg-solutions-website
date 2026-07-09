@@ -1,0 +1,7 @@
+interface IZGAnalytics {
+  track: (eventName: string, properties?: Record<string, string | number | boolean>) => void;
+}
+
+interface Window {
+  izg?: IZGAnalytics;
+}

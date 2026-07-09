@@ -1,5 +1,5 @@
-import Link from "next/link";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import TrackedLink from "@/components/ui/TrackedLink";
 import {
   Globe,
   MessageCircle,
@@ -545,12 +545,14 @@ export default function PricingPage() {
               Tell us about your business and we&apos;ll recommend the right
               solution, with a clear quote, no obligations.
             </p>
-            <Link
+            <TrackedLink
               href="/contact"
+              event="cta_click"
+              properties={{ button: "get_free_quote", page: "/pricing" }}
               className="inline-flex items-center gap-2 bg-white text-primary-700 px-6 py-3 rounded-lg font-medium hover:bg-primary-50 transition-colors"
             >
               Get a Free Quote <ArrowRight size={18} />
-            </Link>
+            </TrackedLink>
           </AnimatedSection>
         </div>
       </section>

@@ -1,5 +1,5 @@
-import Link from "next/link";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import TrackedLink from "@/components/ui/TrackedLink";
 import {
   Globe,
   MessageCircle,
@@ -31,18 +31,22 @@ export default function Home() {
               automatically, and grow without being glued to your phone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <TrackedLink
                 href="/contact"
+                event="cta_click"
+                properties={{ button: "get_started", page: "/" }}
                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 transition-colors"
               >
                 Get Started <ArrowRight size={18} />
-              </Link>
-              <Link
+              </TrackedLink>
+              <TrackedLink
                 href="/services"
+                event="cta_click"
+                properties={{ button: "view_services", page: "/" }}
                 className="inline-flex items-center justify-center gap-2 border border-surface-600 text-surface-200 px-6 py-3 rounded-lg font-medium hover:border-surface-400 hover:text-white transition-colors"
               >
                 View Services
-              </Link>
+              </TrackedLink>
             </div>
           </AnimatedSection>
         </div>
@@ -217,12 +221,14 @@ export default function Home() {
               Let&apos;s talk about what you need. No pressure, no jargon, just
               a conversation about how we can help.
             </p>
-            <Link
+            <TrackedLink
               href="/contact"
+              event="cta_click"
+              properties={{ button: "get_in_touch", page: "/" }}
               className="inline-flex items-center gap-2 bg-white text-primary-700 px-6 py-3 rounded-lg font-medium hover:bg-primary-50 transition-colors"
             >
               Get In Touch <ArrowRight size={18} />
-            </Link>
+            </TrackedLink>
           </AnimatedSection>
         </div>
       </section>

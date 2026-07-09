@@ -41,6 +41,11 @@ export default function Navbar() {
               <Link
                 href={link.href}
                 className="text-sm text-surface-600 hover:text-primary-600 transition-colors"
+                onClick={() =>
+                  window.izg?.track("nav_click", {
+                    item: link.label.toLowerCase().replace(/\s+/g, "_"),
+                  })
+                }
               >
                 {link.label}
               </Link>
@@ -50,6 +55,12 @@ export default function Navbar() {
             <Link
               href="/contact"
               className="text-sm font-medium bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+              onClick={() =>
+                window.izg?.track("cta_click", {
+                  button: "get_started",
+                  page: window.location.pathname,
+                })
+              }
             >
               Get Started
             </Link>
@@ -81,7 +92,12 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     className="text-surface-700 hover:text-primary-600 transition-colors"
-                    onClick={() => setMobileOpen(false)}
+                    onClick={() => {
+                      setMobileOpen(false);
+                      window.izg?.track("nav_click", {
+                        item: link.label.toLowerCase().replace(/\s+/g, "_"),
+                      });
+                    }}
                   >
                     {link.label}
                   </Link>
@@ -91,7 +107,13 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   className="inline-block font-medium bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
-                  onClick={() => setMobileOpen(false)}
+                  onClick={() => {
+                    setMobileOpen(false);
+                    window.izg?.track("cta_click", {
+                      button: "get_started",
+                      page: window.location.pathname,
+                    });
+                  }}
                 >
                   Get Started
                 </Link>
