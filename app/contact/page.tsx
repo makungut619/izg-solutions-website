@@ -25,6 +25,11 @@ export default function ContactPage() {
       });
       if (res.ok) {
         setSubmitted(true);
+        window.izg?.track("form_submit", {
+          form: "contact",
+          page: "/contact",
+          service: formData.service || "not_specified",
+        });
       }
     } catch {
       // Still show success to the user, we'll see the error in logs
@@ -68,7 +73,17 @@ export default function ContactPage() {
                       <Mail className="text-primary-600 mt-0.5" size={18} />
                       <div>
                         <p className="text-sm text-surface-500">Email</p>
-                        <p className="text-sm font-medium">info@izgsolutions.co.za</p>
+                        <a
+                          href="mailto:info@izgsolutions.co.za"
+                          className="text-sm font-medium text-primary-600 hover:text-primary-700 transition-colors"
+                          onClick={() =>
+                            window.izg?.track("email_click", {
+                              page: "/contact",
+                            })
+                          }
+                        >
+                          info@izgsolutions.co.za
+                        </a>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -87,6 +102,11 @@ export default function ContactPage() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-sm font-medium text-primary-600 hover:text-primary-700 transition-colors"
+                          onClick={() =>
+                            window.izg?.track("whatsapp_click", {
+                              page: "/contact",
+                            })
+                          }
                         >
                           Chat with us instantly
                         </a>

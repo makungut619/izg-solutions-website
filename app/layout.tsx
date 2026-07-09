@@ -5,7 +5,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CookieConsent from "@/components/ui/CookieConsent";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
+import { Analytics } from "@/components/analytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -105,6 +106,11 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.izg = window.izg || { track: function() { (window._izg_q = window._izg_q || []).push(arguments); }};`,
+          }}
+        />
       </head>
       <body className="font-sans">
         <Navbar />
@@ -113,6 +119,7 @@ export default function RootLayout({
         <WhatsAppButton />
         <CookieConsent />
         <Analytics />
+        <VercelAnalytics />
       </body>
     </html>
   );
