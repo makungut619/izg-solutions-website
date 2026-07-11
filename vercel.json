@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/wa",
+      "destination": "/?utm_source=whatsapp&utm_medium=other&utm_campaign=izg_solutions_chatbot",
+      "permanent": false
+    }
+  ]
+}
