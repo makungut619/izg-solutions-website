@@ -4,6 +4,21 @@
       "source": "/wa",
       "destination": "/?utm_source=whatsapp&utm_medium=other&utm_campaign=izg_solutions_chatbot",
       "permanent": false
+    },
+    {
+      "source": "/wam",
+      "destination": "/?utm_source=whatsapp&utm_medium=message&utm_campaign=lead_identification_whatsapp_message",
+      "permanent": false
+    },
+    {
+      "source": "/ig",
+      "destination": "/?utm_source=instagram&utm_medium=message&utm_campaign=lead_identification_instagram_message",
+      "permanent": false
+    },
+    {
+      "source": "/em",
+      "destination": "/?utm_source=email&utm_medium=message&utm_campaign=lead_identification_email_message",
+      "permanent": false
     }
   ]
 }
