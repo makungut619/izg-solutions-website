@@ -4,7 +4,7 @@ import { Globe, MessageCircle, FileText } from "lucide-react";
 export const metadata = {
   title: "Our Work",
   description:
-    "See what we've built. Websites, WhatsApp chatbots, and digital catalogues for real businesses.",
+    "See what we've built. Websites, WhatsApp chatbots, and custom digital solutions for real businesses.",
 };
 
 const projects = [
@@ -50,7 +50,7 @@ const projects = [
   },
   {
     title: "Mvelase Aura",
-    category: "Digital Catalogue",
+    category: "Custom Digital Solution",
     icon: FileText,
     industry: "Fragrance / Retail",
     description:

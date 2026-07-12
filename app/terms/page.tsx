@@ -31,7 +31,7 @@ export default function TermsPage() {
               <p className="mt-2">
                 IZG Solutions (Pty) Ltd (Reg. No: 2025/205838/07) is a registered
                 South African company providing website development, WhatsApp
-                chatbot automation, and digital catalogue services.
+                chatbot automation, and custom digital solutions.
               </p>
             </section>
 
@@ -43,7 +43,7 @@ export default function TermsPage() {
               <ul className="list-disc pl-5 mt-2 space-y-1">
                 <li>Professional website design and development</li>
                 <li>WhatsApp chatbot automation and configuration</li>
-                <li>Digital PDF catalogue generation</li>
+                <li>Custom digital solutions (PDF catalogues, integrations, internal tools)</li>
                 <li>Related digital solutions for small and medium businesses</li>
               </ul>
               <p className="mt-2">

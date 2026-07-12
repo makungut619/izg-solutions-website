@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     "web design Gauteng",
     "chatbot for business",
     "digital catalogue",
+    "custom digital solutions",
     "SME website",
   ],
   authors: [{ name: "IZG Solutions" }],

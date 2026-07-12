@@ -222,7 +222,7 @@ export default function ContactPage() {
                         <option value="website">Professional Website</option>
                         <option value="chatbot">WhatsApp Chatbot</option>
                         <option value="both">Website + Chatbot</option>
-                        <option value="catalogue">Digital Catalogue</option>
+                        <option value="custom">Custom Digital Solution</option>
                         <option value="other">Something else</option>
                       </select>
                     </div>

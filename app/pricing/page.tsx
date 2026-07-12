@@ -124,7 +124,7 @@ const websiteMonthlyPlans = [
     features: [
       "Everything in Basic",
       "SEO monitoring",
-      "3–4 content updates/month",
+      "3-4 content updates/month",
       "Performance checks",
     ],
   },
