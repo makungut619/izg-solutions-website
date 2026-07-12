@@ -19,6 +19,31 @@
       "source": "/em",
       "destination": "/?utm_source=email&utm_medium=message&utm_campaign=lead_identification_email_message",
       "permanent": false
+    },
+    {
+      "source": "/x",
+      "destination": "/?utm_source=twitter&utm_medium=bio&utm_campaign=bio_link_twitter_bio",
+      "permanent": false
+    },
+    {
+      "source": "/tt",
+      "destination": "/?utm_source=tiktok&utm_medium=bio&utm_campaign=bio_link_tiktok_bio",
+      "permanent": false
+    },
+    {
+      "source": "/insta",
+      "destination": "/?utm_source=instagram&utm_medium=bio&utm_campaign=bio_link_instagram_bio",
+      "permanent": false
+    },
+    {
+      "source": "/fb",
+      "destination": "/?utm_source=facebook&utm_medium=bio&utm_campaign=bio_link_facebook_bio",
+      "permanent": false
+    },
+    {
+      "source": "/th",
+      "destination": "/?utm_source=threads&utm_medium=bio&utm_campaign=bio_link_threads_bio",
+      "permanent": false
     }
   ]
 }

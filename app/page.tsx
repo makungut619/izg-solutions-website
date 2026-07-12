@@ -60,7 +60,7 @@ export default function Home() {
               What We Do
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-surface-900 mb-4">
-              Two pillars. One goal.
+              Three pillars. One goal.
             </h2>
             <p className="text-surface-500 max-w-2xl mb-14 text-lg">
               We give small and medium businesses the digital capability of much
@@ -100,10 +100,11 @@ export default function Home() {
                 <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-100 transition-colors">
                   <FileText className="text-primary-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold mb-3">Digital Catalogues</h3>
+                <h3 className="text-lg font-semibold mb-3">Custom Digital Solutions</h3>
                 <p className="text-surface-500 text-sm leading-relaxed">
-                  Professional PDF product catalogues your team can share
-                  instantly. Branded, structured, and print-ready.
+                  Tailored IT solutions for your unique business needs. From PDF
+                  catalogues to custom integrations, we build what off-the-shelf
+                  software can&apos;t.
                 </p>
               </div>
             </AnimatedSection>
