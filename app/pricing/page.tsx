@@ -11,7 +11,7 @@ import {
 export const metadata = {
   title: "Pricing",
   description:
-    "Transparent pricing for websites, WhatsApp chatbots, and digital catalogues. See what fits your business and budget.",
+    "Transparent pricing for websites, WhatsApp chatbots, and custom digital solutions. See what fits your business and budget.",
 };
 
 const websiteTiers = [
@@ -124,7 +124,7 @@ const websiteMonthlyPlans = [
     features: [
       "Everything in Basic",
       "SEO monitoring",
-      "3–4 content updates/month",
+      "3-4 content updates/month",
       "Performance checks",
     ],
   },
@@ -202,13 +202,21 @@ export default function PricingPage() {
       <section className="section-padding bg-white">
         <div className="container-narrow">
           <AnimatedSection>
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center gap-3 mb-2">
               <div className="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center">
                 <MessageCircle className="text-primary-600" size={20} />
               </div>
               <h2 className="text-2xl font-bold text-surface-900">
                 WhatsApp Chatbots
               </h2>
+            </div>
+            <div className="flex items-center gap-2 mb-8">
+              <span className="inline-flex items-center gap-1.5 bg-green-50 text-green-700 text-xs font-medium px-3 py-1 rounded-full border border-green-200">
+                <svg viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5">
+                  <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                </svg>
+                Meta Verified Tech Provider
+              </span>
             </div>
           </AnimatedSection>
 
@@ -320,7 +328,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Catalogues */}
+      {/* Custom Digital Solutions */}
       <section className="section-padding bg-white">
         <div className="container-narrow">
           <AnimatedSection>
@@ -329,32 +337,29 @@ export default function PricingPage() {
                 <FileText className="text-primary-600" size={20} />
               </div>
               <h2 className="text-2xl font-bold text-surface-900">
-                Digital Catalogues
+                Custom Digital Solutions
               </h2>
             </div>
             <div className="max-w-2xl">
               <div className="p-7 rounded-2xl border border-surface-100">
                 <div className="mb-3">
                   <span className="text-3xl font-bold text-surface-900">
-                    R3,000
-                  </span>
-                  <span className="text-surface-400 text-sm ml-1">
-                    starting from
+                    Custom Quote
                   </span>
                 </div>
                 <p className="text-sm text-surface-500 mb-5">
-                  Professional PDF product catalogues. Branded, structured, and
-                  ready to share. Price depends on number of products and
-                  catalogue variations needed.
+                  Tailored solutions built for your specific business needs. From
+                  PDF catalogues to custom integrations and internal tools. Price
+                  depends on scope and complexity.
                 </p>
                 <ul className="space-y-2.5">
                   {[
-                    "Product data structuring from your spreadsheet",
-                    "Image preparation & formatting",
-                    "Branded cover pages & layout design",
-                    "Multiple catalogue variations (by category, season, etc.)",
-                    "Print-ready and digital-sharing-ready",
-                    "Data structured for future website use",
+                    "PDF product catalogues (branded, structured, print-ready)",
+                    "Custom integrations between your existing tools",
+                    "Internal dashboards & reporting tools",
+                    "Workflow automation",
+                    "Data structuring & migration",
+                    "Scoped and quoted per project",
                   ].map((feature) => (
                     <li
                       key={feature}
