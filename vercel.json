@@ -44,6 +44,11 @@
       "source": "/th",
       "destination": "/?utm_source=threads&utm_medium=bio&utm_campaign=bio_link_threads_bio",
       "permanent": false
+    },
+    {
+      "source": "/igp",
+      "destination": "/?utm_source=instagram&utm_medium=post&utm_campaign=first_post_engagement_instagram_post",
+      "permanent": false
     }
   ]
 }
