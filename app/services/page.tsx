@@ -17,7 +17,7 @@ import {
 export const metadata = {
   title: "Services",
   description:
-    "Professional websites, WhatsApp chatbot automation, and custom digital solutions for small and medium businesses in South Africa.",
+    "WhatsApp chatbot automation, professional websites, and custom digital solutions for small and medium businesses in South Africa.",
 };
 
 export default function ServicesPage() {
@@ -42,116 +42,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Websites */}
-      <section className="section-padding bg-white" id="websites">
-        <div className="container-narrow">
-          <AnimatedSection>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center">
-                <Globe className="text-primary-600" size={24} />
-              </div>
-              <h2 className="text-3xl font-bold text-surface-900">
-                Professional Websites
-              </h2>
-            </div>
-            <p className="text-surface-500 text-lg max-w-3xl mb-10 leading-relaxed">
-              Modern, mobile-first websites that make your business look
-              credible, rank on Google, and convert visitors into customers. We
-              build fast using proven templates so you get premium quality
-              without the premium timeline.
-            </p>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-            {[
-              {
-                icon: Briefcase,
-                title: "Trade & Contractor Sites",
-                desc: "For electricians, plumbers, builders, roofers. Dark industrial aesthetic with project galleries and quote request forms.",
-              },
-              {
-                icon: ShoppingCart,
-                title: "E-commerce Storefronts",
-                desc: "Online shops with product management, WhatsApp checkout, and seasonal collections. Client manages products via CMS.",
-              },
-              {
-                icon: Utensils,
-                title: "Restaurant & Hospitality",
-                desc: "Menu displays, online ordering integration, location maps, and booking functionality.",
-              },
-              {
-                icon: Palette,
-                title: "Professional Services",
-                desc: "For consultants, lawyers, accountants, financial advisors. Clean, trustworthy design that builds credibility.",
-              },
-              {
-                icon: Globe,
-                title: "Health & Beauty",
-                desc: "For salons, spas, clinics, wellness practitioners. Elegant design with booking integration and service showcases.",
-              },
-              {
-                icon: Globe,
-                title: "Real Estate & Property",
-                desc: "For agents, developers, and property managers. Listing displays, virtual tours, and lead capture.",
-              },
-              {
-                icon: Globe,
-                title: "Education & Training",
-                desc: "For tutors, training providers, and schools. Course listings, timetables, and enquiry forms.",
-              },
-              {
-                icon: Globe,
-                title: "Events & Entertainment",
-                desc: "For DJs, photographers, event planners, venues. Portfolio galleries, booking forms, and package displays.",
-              },
-              {
-                icon: Globe,
-                title: "Automotive & Transport",
-                desc: "For mechanics, car washes, logistics companies. Service listings, quote requests, and fleet showcases.",
-              },
-            ].map((item, i) => (
-              <AnimatedSection key={item.title} delay={i * 0.1}>
-                <div className="p-6 rounded-xl border border-surface-100 hover:border-primary-200 transition-colors">
-                  <div className="flex items-center gap-3 mb-3">
-                    <item.icon className="text-primary-600" size={20} />
-                    <h3 className="font-semibold">{item.title}</h3>
-                  </div>
-                  <p className="text-surface-500 text-sm leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-
-          <AnimatedSection>
-            <div className="bg-surface-50 rounded-2xl p-8">
-              <h3 className="font-semibold mb-4">Every website includes:</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                {[
-                  "Mobile responsive design",
-                  "SEO optimisation",
-                  "Fast loading performance",
-                  "WhatsApp integration ready",
-                  "Contact forms",
-                  "Google Maps",
-                  "Analytics setup",
-                  "SSL security",
-                  "Hosting & deployment",
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-sm text-surface-600">
-                    <div className="w-1.5 h-1.5 bg-primary-500 rounded-full" />
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* WhatsApp Chatbots */}
-      <section className="section-padding bg-surface-50" id="chatbots">
+      <section className="section-padding bg-white" id="chatbots">
         <div className="container-narrow">
           <AnimatedSection>
             <div className="flex items-center gap-4 mb-6">
@@ -226,7 +118,7 @@ export default function ServicesPage() {
           </div>
 
           <AnimatedSection>
-            <div className="bg-white rounded-2xl p-8 border border-surface-100">
+            <div className="bg-surface-50 rounded-2xl p-8 border border-surface-100">
               <h3 className="font-semibold mb-4">How it works for your customers:</h3>
               <div className="flex flex-col md:flex-row gap-6">
                 {[
@@ -240,6 +132,114 @@ export default function ServicesPage() {
                       {item.step}
                     </span>
                     <p className="text-sm text-surface-600">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Websites */}
+      <section className="section-padding bg-surface-50" id="websites">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center">
+                <Globe className="text-primary-600" size={24} />
+              </div>
+              <h2 className="text-3xl font-bold text-surface-900">
+                Professional Websites
+              </h2>
+            </div>
+            <p className="text-surface-500 text-lg max-w-3xl mb-10 leading-relaxed">
+              Modern, mobile-first websites that make your business look
+              credible, rank on Google, and convert visitors into customers. We
+              build fast using proven templates so you get premium quality
+              without the premium timeline.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            {[
+              {
+                icon: Briefcase,
+                title: "Trade & Contractor Sites",
+                desc: "For electricians, plumbers, builders, roofers. Dark industrial aesthetic with project galleries and quote request forms.",
+              },
+              {
+                icon: ShoppingCart,
+                title: "E-commerce Storefronts",
+                desc: "Online shops with product management, WhatsApp checkout, and seasonal collections. Client manages products via CMS.",
+              },
+              {
+                icon: Utensils,
+                title: "Restaurant & Hospitality",
+                desc: "Menu displays, online ordering integration, location maps, and booking functionality.",
+              },
+              {
+                icon: Palette,
+                title: "Professional Services",
+                desc: "For consultants, lawyers, accountants, financial advisors. Clean, trustworthy design that builds credibility.",
+              },
+              {
+                icon: Globe,
+                title: "Health & Beauty",
+                desc: "For salons, spas, clinics, wellness practitioners. Elegant design with booking integration and service showcases.",
+              },
+              {
+                icon: Globe,
+                title: "Real Estate & Property",
+                desc: "For agents, developers, and property managers. Listing displays, virtual tours, and lead capture.",
+              },
+              {
+                icon: Globe,
+                title: "Education & Training",
+                desc: "For tutors, training providers, and schools. Course listings, timetables, and enquiry forms.",
+              },
+              {
+                icon: Globe,
+                title: "Events & Entertainment",
+                desc: "For DJs, photographers, event planners, venues. Portfolio galleries, booking forms, and package displays.",
+              },
+              {
+                icon: Globe,
+                title: "Automotive & Transport",
+                desc: "For mechanics, car washes, logistics companies. Service listings, quote requests, and fleet showcases.",
+              },
+            ].map((item, i) => (
+              <AnimatedSection key={item.title} delay={i * 0.1}>
+                <div className="p-6 rounded-xl border border-surface-100 bg-white hover:border-primary-200 transition-colors">
+                  <div className="flex items-center gap-3 mb-3">
+                    <item.icon className="text-primary-600" size={20} />
+                    <h3 className="font-semibold">{item.title}</h3>
+                  </div>
+                  <p className="text-surface-500 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection>
+            <div className="bg-white rounded-2xl p-8 border border-surface-100">
+              <h3 className="font-semibold mb-4">Every website includes:</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                {[
+                  "Mobile responsive design",
+                  "SEO optimisation",
+                  "Fast loading performance",
+                  "WhatsApp integration ready",
+                  "Contact forms",
+                  "Google Maps",
+                  "Analytics setup",
+                  "SSL security",
+                  "Hosting & deployment",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-2 text-sm text-surface-600">
+                    <div className="w-1.5 h-1.5 bg-primary-500 rounded-full" />
+                    {item}
                   </div>
                 ))}
               </div>
