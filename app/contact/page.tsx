@@ -121,7 +121,7 @@ export default function ContactPage() {
                   </h3>
                   <div className="flex items-center gap-4">
                     <a
-                      href=""
+                      href="https://www.instagram.com/izgsolutions?igsh=ZW5mNzVjanhmNDc0"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Follow us on Instagram"
@@ -135,7 +135,7 @@ export default function ContactPage() {
                       </svg>
                     </a>
                     <a
-                      href=""
+                      href="https://www.tiktok.com/@izg.solutions?_r=1&_t=ZS-97zaB4AWOJw"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Follow us on TikTok"
@@ -149,7 +149,7 @@ export default function ContactPage() {
                       </svg>
                     </a>
                     <a
-                      href=""
+                      href="https://x.com/izgsolutions?s=11&t=18kaIJ8QYY8PY6Kqp3iUYw"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Follow us on X"
