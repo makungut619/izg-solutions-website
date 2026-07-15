@@ -49,6 +49,11 @@
       "source": "/igp",
       "destination": "/?utm_source=instagram&utm_medium=post&utm_campaign=first_post_engagement_instagram_post",
       "permanent": false
+    },
+    {
+      "source": "/dc",
+      "destination": "/?utm_source=other&utm_medium=other&utm_campaign=business_contact_card_other_other",
+      "permanent": false
     }
   ]
 }
