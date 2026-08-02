@@ -4,7 +4,24 @@ import { Target, Users, Lightbulb } from "lucide-react";
 export const metadata = {
   title: "About",
   description:
-    "IZG Solutions helps small and medium businesses in South Africa establish a professional digital presence and automate customer engagement.",
+    "IZG Solutions helps small and medium businesses in South Africa establish a professional digital presence and automate customer engagement. Based in Centurion, Gauteng.",
+  keywords: [
+    "about IZG Solutions",
+    "web developer Centurion",
+    "digital agency Gauteng",
+    "small business digital partner South Africa",
+    "WhatsApp automation company",
+    "website agency Pretoria",
+  ],
+  openGraph: {
+    title: "About Us | IZG Solutions",
+    description:
+      "We help small businesses in South Africa get online and automate customer engagement with professional websites and WhatsApp chatbots.",
+    url: "https://www.izgsolutions.co.za/about",
+  },
+  alternates: {
+    canonical: "https://www.izgsolutions.co.za/about",
+  },
 };
 
 export default function AboutPage() {

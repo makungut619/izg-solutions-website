@@ -11,7 +11,26 @@ import {
 export const metadata = {
   title: "Pricing",
   description:
-    "Transparent pricing for websites, WhatsApp chatbots, and custom digital solutions. See what fits your business and budget.",
+    "Transparent pricing for websites, WhatsApp chatbots, and custom digital solutions. Affordable packages for small businesses in South Africa starting from R3,000.",
+  keywords: [
+    "website pricing South Africa",
+    "WhatsApp chatbot pricing",
+    "affordable website packages",
+    "cheap website South Africa",
+    "small business website cost",
+    "WhatsApp bot cost South Africa",
+    "web design prices Gauteng",
+    "ecommerce website price",
+  ],
+  openGraph: {
+    title: "Pricing | IZG Solutions",
+    description:
+      "Transparent pricing for websites and WhatsApp chatbots. Affordable packages starting from R3,000.",
+    url: "https://www.izgsolutions.co.za/pricing",
+  },
+  alternates: {
+    canonical: "https://www.izgsolutions.co.za/pricing",
+  },
 };
 
 const websiteTiers = [
@@ -177,8 +196,67 @@ const chatbotMonthlyPlans = [
 ];
 
 export default function PricingPage() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Are these exact prices?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "These are starting prices. Your exact quote depends on the scope of your project: number of pages, complexity of flows, amount of content, etc. We'll give you a clear quote before any work begins.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What about payment?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We work on a deposit + balance model. Typically 50% upfront for smaller projects, with the balance due on delivery. Exact terms are in your quotation.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How long does delivery take?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Websites are typically delivered within 5 business days from when we receive all your content. WhatsApp chatbots depend on Meta's verification and approval process, which can take longer. We'll give you a realistic timeline upfront based on your setup status.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What if I need changes after delivery?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "2 rounds of revisions are included in every project. Additional changes after that are billed at R200/hour.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is the monthly plan mandatory?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "For websites, it's optional but recommended. For WhatsApp chatbots, yes. Your bot runs on our platform and requires ongoing hosting, monitoring, and Meta API access to function.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can I get a website AND a chatbot?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Absolutely, and they work best together. We offer bundle pricing when you take both services. Get in touch and we'll put together a package.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* Hero */}
       <section className="section-padding pt-32 bg-surface-50">
         <div className="container-narrow">

@@ -22,19 +22,26 @@ export const metadata: Metadata = {
   description:
     "Professional websites and WhatsApp chatbot automation for small and medium businesses in South Africa. We build your digital presence and automate customer engagement 24/7.",
   keywords: [
-    "website development",
     "website development South Africa",
     "website development Centurion",
-    "WhatsApp chatbot",
-    "WhatsApp automation South Africa",
-    "small business website",
-    "business automation",
-    "digital presence",
+    "web developer Centurion",
     "web design Gauteng",
-    "chatbot for business",
-    "digital catalogue",
-    "custom digital solutions",
+    "web design Pretoria",
+    "affordable website South Africa",
+    "small business website South Africa",
+    "business website Pretoria",
     "SME website",
+    "WhatsApp chatbot South Africa",
+    "WhatsApp automation South Africa",
+    "WhatsApp bot for business",
+    "chatbot developer Gauteng",
+    "WhatsApp ordering system",
+    "WhatsApp booking bot",
+    "business automation South Africa",
+    "digital presence",
+    "digital catalogue",
+    "custom digital solutions South Africa",
+    "ecommerce website South Africa",
   ],
   authors: [{ name: "IZG Solutions" }],
   creator: "IZG Solutions",
@@ -46,6 +53,14 @@ export const metadata: Metadata = {
     title: "IZG Solutions | Your Business, Always On",
     description:
       "Professional websites and WhatsApp chatbot automation for small and medium businesses in South Africa.",
+    images: [
+      {
+        url: "https://www.izgsolutions.co.za/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "IZG Solutions - Professional websites and WhatsApp chatbot automation for growing businesses",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -64,9 +79,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: "https://www.izgsolutions.co.za",
-  },
   verification: {
     google: "KdR8fn6bfbim5XSLxQ710pi-VIZFboFB5YGHBu1Totk",
   },
@@ -79,10 +91,12 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "LocalBusiness",
+    "@id": "https://www.izgsolutions.co.za/#business",
     name: "IZG Solutions",
     url: "https://www.izgsolutions.co.za",
-    logo: "https://www.izgsolutions.co.za/opengraph-image",
+    logo: "https://www.izgsolutions.co.za/opengraph-image.png",
+    image: "https://www.izgsolutions.co.za/opengraph-image.png",
     description:
       "Professional websites and WhatsApp chatbot automation for small and medium businesses in South Africa.",
     address: {
@@ -91,13 +105,42 @@ export default function RootLayout({
       addressRegion: "Gauteng",
       addressCountry: "ZA",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -25.8603,
+      longitude: 28.1894,
+    },
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+27-72-362-8397",
       contactType: "sales",
       email: "info@izgsolutions.co.za",
+      availableLanguage: ["English"],
     },
-    sameAs: [],
+    priceRange: "R3000 - R12000",
+    areaServed: [
+      {
+        "@type": "Country",
+        name: "South Africa",
+      },
+      {
+        "@type": "City",
+        name: "Centurion",
+      },
+      {
+        "@type": "City",
+        name: "Pretoria",
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Gauteng",
+      },
+    ],
+    sameAs: [
+      "https://www.instagram.com/izgsolutions",
+      "https://www.tiktok.com/@izg.solutions",
+      "https://x.com/izgsolutions",
+    ],
   };
 
   return (

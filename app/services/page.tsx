@@ -17,12 +17,88 @@ import {
 export const metadata = {
   title: "Services",
   description:
-    "WhatsApp chatbot automation, professional websites, and custom digital solutions for small and medium businesses in South Africa.",
+    "WhatsApp chatbot automation, professional websites, and custom digital solutions for small and medium businesses in South Africa. Meta verified tech provider.",
+  keywords: [
+    "WhatsApp chatbot South Africa",
+    "WhatsApp automation for business",
+    "WhatsApp ordering system",
+    "WhatsApp booking bot South Africa",
+    "professional website South Africa",
+    "business website Centurion",
+    "web design Gauteng",
+    "ecommerce website South Africa",
+    "custom digital solutions",
+    "PDF catalogue design",
+    "small business automation",
+  ],
+  openGraph: {
+    title: "Our Services | IZG Solutions",
+    description:
+      "WhatsApp chatbot automation, professional websites, and custom digital solutions for growing businesses in South Africa.",
+    url: "https://www.izgsolutions.co.za/services",
+  },
+  alternates: {
+    canonical: "https://www.izgsolutions.co.za/services",
+  },
 };
 
 export default function ServicesPage() {
+  const servicesJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "IZG Solutions Services",
+    itemListElement: [
+      {
+        "@type": "Service",
+        position: 1,
+        name: "WhatsApp Chatbot Automation",
+        description:
+          "Automated WhatsApp assistants that take orders, book appointments, answer questions, and capture leads 24/7.",
+        provider: {
+          "@type": "LocalBusiness",
+          name: "IZG Solutions",
+          url: "https://www.izgsolutions.co.za",
+        },
+        areaServed: { "@type": "Country", name: "South Africa" },
+        serviceType: "WhatsApp Automation",
+      },
+      {
+        "@type": "Service",
+        position: 2,
+        name: "Professional Website Development",
+        description:
+          "Modern, mobile-first websites that make your business look credible, rank on Google, and convert visitors into customers.",
+        provider: {
+          "@type": "LocalBusiness",
+          name: "IZG Solutions",
+          url: "https://www.izgsolutions.co.za",
+        },
+        areaServed: { "@type": "Country", name: "South Africa" },
+        serviceType: "Web Development",
+      },
+      {
+        "@type": "Service",
+        position: 3,
+        name: "Custom Digital Solutions",
+        description:
+          "Tailored digital solutions including PDF catalogues, custom integrations, and internal business tools.",
+        provider: {
+          "@type": "LocalBusiness",
+          name: "IZG Solutions",
+          url: "https://www.izgsolutions.co.za",
+        },
+        areaServed: { "@type": "Country", name: "South Africa" },
+        serviceType: "Custom Software Development",
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
       {/* Hero */}
       <section className="section-padding pt-32 bg-surface-50">
         <div className="container-narrow">

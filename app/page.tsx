@@ -10,6 +10,12 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+export const metadata = {
+  alternates: {
+    canonical: "https://www.izgsolutions.co.za",
+  },
+};
+
 export default function Home() {
   return (
     <>
