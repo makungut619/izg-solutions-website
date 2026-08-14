@@ -45,6 +45,20 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "IZG Solutions" }],
   creator: "IZG Solutions",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#0c93e7" },
+    ],
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
     locale: "en_ZA",
@@ -55,7 +69,7 @@ export const metadata: Metadata = {
       "Professional websites and WhatsApp chatbot automation for small and medium businesses in South Africa.",
     images: [
       {
-        url: "https://www.izgsolutions.co.za/opengraph-image.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "IZG Solutions - Professional websites and WhatsApp chatbot automation for growing businesses",
@@ -67,6 +81,7 @@ export const metadata: Metadata = {
     title: "IZG Solutions | Your Business, Always On",
     description:
       "Professional websites and WhatsApp chatbot automation for small and medium businesses in South Africa.",
+    images: ["/twitter-card.jpg"],
   },
   robots: {
     index: true,
@@ -82,6 +97,10 @@ export const metadata: Metadata = {
   verification: {
     google: "KdR8fn6bfbim5XSLxQ710pi-VIZFboFB5YGHBu1Totk",
   },
+  other: {
+    "msapplication-TileColor": "#0c93e7",
+    "msapplication-config": "/browserconfig.xml",
+  },
 };
 
 export default function RootLayout({
@@ -95,8 +114,8 @@ export default function RootLayout({
     "@id": "https://www.izgsolutions.co.za/#business",
     name: "IZG Solutions",
     url: "https://www.izgsolutions.co.za",
-    logo: "https://www.izgsolutions.co.za/opengraph-image.png",
-    image: "https://www.izgsolutions.co.za/opengraph-image.png",
+    logo: "https://www.izgsolutions.co.za/schema-logo.png",
+    image: "https://www.izgsolutions.co.za/og-image.jpg",
     description:
       "Professional websites and WhatsApp chatbot automation for small and medium businesses in South Africa.",
     address: {
