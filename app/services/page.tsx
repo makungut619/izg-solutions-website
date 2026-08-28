@@ -1,8 +1,10 @@
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import Link from "next/link";
 import {
   Globe,
   MessageCircle,
   FileText,
+  CreditCard,
   ShoppingCart,
   Calendar,
   Utensils,
@@ -12,17 +14,114 @@ import {
   BarChart3,
   Search,
   Layers,
+  QrCode,
+  Wallet,
+  RefreshCw,
+  ArrowRight,
 } from "lucide-react";
 
 export const metadata = {
   title: "Services",
   description:
-    "WhatsApp chatbot automation, professional websites, and custom digital solutions for small and medium businesses in South Africa.",
+    "WhatsApp chatbot automation, professional websites, and custom digital solutions for small and medium businesses in South Africa. Meta verified tech provider.",
+  keywords: [
+    "WhatsApp chatbot South Africa",
+    "WhatsApp automation for business",
+    "WhatsApp ordering system",
+    "WhatsApp booking bot South Africa",
+    "professional website South Africa",
+    "business website Centurion",
+    "web design Gauteng",
+    "ecommerce website South Africa",
+    "custom digital solutions",
+    "PDF catalogue design",
+    "small business automation",
+    "digital business card South Africa",
+    "QR code business card",
+    "Apple Wallet business card",
+  ],
+  openGraph: {
+    title: "Our Services | IZG Solutions",
+    description:
+      "WhatsApp chatbot automation, professional websites, and custom digital solutions for growing businesses in South Africa.",
+    url: "https://www.izgsolutions.co.za/services",
+  },
+  alternates: {
+    canonical: "https://www.izgsolutions.co.za/services",
+  },
 };
 
 export default function ServicesPage() {
+  const servicesJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "IZG Solutions Services",
+    itemListElement: [
+      {
+        "@type": "Service",
+        position: 2,
+        name: "WhatsApp Chatbot Automation",
+        description:
+          "Automated WhatsApp assistants that take orders, book appointments, answer questions, and capture leads 24/7.",
+        provider: {
+          "@type": "LocalBusiness",
+          name: "IZG Solutions",
+          url: "https://www.izgsolutions.co.za",
+        },
+        areaServed: { "@type": "Country", name: "South Africa" },
+        serviceType: "WhatsApp Automation",
+      },
+      {
+        "@type": "Service",
+        position: 3,
+        name: "Professional Website Development",
+        description:
+          "Modern, mobile-first websites that make your business look credible, rank on Google, and convert visitors into customers.",
+        provider: {
+          "@type": "LocalBusiness",
+          name: "IZG Solutions",
+          url: "https://www.izgsolutions.co.za",
+        },
+        areaServed: { "@type": "Country", name: "South Africa" },
+        serviceType: "Web Development",
+      },
+      {
+        "@type": "Service",
+        position: 4,
+        name: "Custom Digital Solutions",
+        description:
+          "Tailored digital solutions including PDF catalogues, custom integrations, and internal business tools.",
+        provider: {
+          "@type": "LocalBusiness",
+          name: "IZG Solutions",
+          url: "https://www.izgsolutions.co.za",
+        },
+        areaServed: { "@type": "Country", name: "South Africa" },
+        serviceType: "Custom Software Development",
+      },
+      {
+        "@type": "Service",
+        position: 1,
+        name: "Digital Business Cards",
+        description:
+          "Smart digital business cards that share contact details via QR code scan and live in Apple, Google, and Samsung Wallet. Always current, with scan analytics and custom branding.",
+        provider: {
+          "@type": "LocalBusiness",
+          name: "IZG Solutions",
+          url: "https://www.izgsolutions.co.za",
+        },
+        areaServed: { "@type": "Country", name: "South Africa" },
+        serviceType: "Digital Business Cards",
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
       {/* Hero */}
       <section className="section-padding pt-32 bg-surface-50">
         <div className="container-narrow">
@@ -34,7 +133,7 @@ export default function ServicesPage() {
               Everything your business needs to be online and automated.
             </h1>
             <p className="text-lg text-surface-500 max-w-2xl leading-relaxed">
-              We offer three core services that work together to give your
+              We offer a range of services that work together to give your
               business a professional digital presence, automated customer
               engagement, and custom solutions built for your unique needs.
             </p>
@@ -42,8 +141,88 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Digital Business Cards */}
+      <section className="section-padding bg-white" id="digital-cards">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center">
+                <CreditCard className="text-primary-600" size={24} />
+              </div>
+              <h2 className="text-3xl font-bold text-surface-900">
+                Digital Business Cards
+              </h2>
+              <span className="bg-primary-100 text-primary-700 text-xs font-semibold px-2.5 py-1 rounded-full">
+                New
+              </span>
+            </div>
+            <p className="text-surface-500 text-lg max-w-3xl mb-10 leading-relaxed">
+              A smart business card that lives in your phone. Share your contact
+              with a single QR scan, add it to Apple, Google, or Samsung Wallet,
+              and update your details anytime, without ever reprinting a card.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            {[
+              {
+                icon: QrCode,
+                title: "One Scan to Save",
+                desc: "People scan your QR with their phone camera and save your full contact instantly. No app, no typing.",
+              },
+              {
+                icon: Wallet,
+                title: "Lives in Your Wallet",
+                desc: "Add your card to Apple, Google, or Samsung Wallet. Always ready, just open your wallet and show the QR.",
+              },
+              {
+                icon: RefreshCw,
+                title: "Always Current",
+                desc: "Change your number, title, or company anytime. The QR never changes, everyone gets your latest details.",
+              },
+              {
+                icon: BarChart3,
+                title: "Scan Analytics",
+                desc: "See how many people scanned and saved your card, so you know your networking is actually working.",
+              },
+              {
+                icon: Globe,
+                title: "Link-in-Bio Page",
+                desc: "An optional branded page linking to your socials, WhatsApp, booking, and website, all in one tap.",
+              },
+              {
+                icon: Palette,
+                title: "Custom Branding",
+                desc: "Your logo, colours, and photo, or your whole company's, for a polished, consistent look.",
+              },
+            ].map((item, i) => (
+              <AnimatedSection key={item.title} delay={i * 0.1}>
+                <div className="p-6 rounded-xl border border-surface-100 bg-surface-50 hover:border-primary-200 transition-colors h-full">
+                  <div className="flex items-center gap-3 mb-3">
+                    <item.icon className="text-primary-600" size={20} />
+                    <h3 className="font-semibold">{item.title}</h3>
+                  </div>
+                  <p className="text-surface-500 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection>
+            <Link
+              href="/digital-cards"
+              className="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 transition-colors"
+            >
+              See it live <ArrowRight size={18} />
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* WhatsApp Chatbots */}
-      <section className="section-padding bg-white" id="chatbots">
+      <section className="section-padding bg-surface-50" id="chatbots">
         <div className="container-narrow">
           <AnimatedSection>
             <div className="flex items-center gap-4 mb-6">
@@ -118,7 +297,7 @@ export default function ServicesPage() {
           </div>
 
           <AnimatedSection>
-            <div className="bg-surface-50 rounded-2xl p-8 border border-surface-100">
+            <div className="bg-white rounded-2xl p-8 border border-surface-100">
               <h3 className="font-semibold mb-4">How it works for your customers:</h3>
               <div className="flex flex-col md:flex-row gap-6">
                 {[
@@ -141,7 +320,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Websites */}
-      <section className="section-padding bg-surface-50" id="websites">
+      <section className="section-padding bg-white" id="websites">
         <div className="container-narrow">
           <AnimatedSection>
             <div className="flex items-center gap-4 mb-6">
@@ -209,7 +388,7 @@ export default function ServicesPage() {
               },
             ].map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.1}>
-                <div className="p-6 rounded-xl border border-surface-100 bg-white hover:border-primary-200 transition-colors">
+                <div className="p-6 rounded-xl border border-surface-100 bg-surface-50 hover:border-primary-200 transition-colors">
                   <div className="flex items-center gap-3 mb-3">
                     <item.icon className="text-primary-600" size={20} />
                     <h3 className="font-semibold">{item.title}</h3>
@@ -223,7 +402,7 @@ export default function ServicesPage() {
           </div>
 
           <AnimatedSection>
-            <div className="bg-white rounded-2xl p-8 border border-surface-100">
+            <div className="bg-surface-50 rounded-2xl p-8 border border-surface-100">
               <h3 className="font-semibold mb-4">Every website includes:</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
                 {[
@@ -249,7 +428,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Custom Digital Solutions */}
-      <section className="section-padding bg-white" id="custom-solutions">
+      <section className="section-padding bg-surface-50" id="custom-solutions">
         <div className="container-narrow">
           <AnimatedSection>
             <div className="flex items-center gap-4 mb-6">
@@ -301,6 +480,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
     </>
   );
 }

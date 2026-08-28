@@ -9,6 +9,7 @@ import BulldogLogo from "@/components/ui/BulldogLogo";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
+  { href: "/digital-cards", label: "Digital Cards" },
   { href: "/pricing", label: "Pricing" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
