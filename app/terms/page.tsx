@@ -14,7 +14,7 @@ export default function TermsPage() {
             Terms &amp; Conditions
           </h1>
           <p className="text-surface-400 text-sm mb-10">
-            Last updated: June 2026
+            Last updated: August 2026
           </p>
 
           <div className="prose prose-surface max-w-none space-y-8 text-surface-600 leading-relaxed text-sm">
@@ -43,6 +43,7 @@ export default function TermsPage() {
               <ul className="list-disc pl-5 mt-2 space-y-1">
                 <li>Professional website design and development</li>
                 <li>WhatsApp chatbot automation and configuration</li>
+                <li>Digital business card creation, hosting, and wallet passes</li>
                 <li>Custom digital solutions (PDF catalogues, integrations, internal tools)</li>
                 <li>Related digital solutions for small and medium businesses</li>
               </ul>
@@ -59,15 +60,16 @@ export default function TermsPage() {
               </h2>
               <p>
                 In addition to project-based deliverables, IZG Solutions provides
-                an ongoing hosted platform service (&quot;the Platform&quot;) that operates
-                WhatsApp chatbots on behalf of clients. The following terms apply
-                to Platform usage:
+                ongoing hosted platform services (&quot;the Platform&quot;) that operate
+                WhatsApp chatbots and host digital business cards on behalf of
+                clients. The following terms apply to Platform usage:
               </p>
               <ul className="list-disc pl-5 mt-2 space-y-1">
                 <li>The Platform is provided on a monthly subscription or per-agreement basis</li>
-                <li>IZG Solutions will use reasonable efforts to maintain Platform availability but does not guarantee 100% uptime</li>
+                <li>Digital business cards are charged as a once-off setup fee per card plus a recurring annual hosting fee, as set out in your quotation or the pricing on our website</li>
+                <li>IZG Solutions will use reasonable efforts to maintain Platform availability, including card pages and wallet passes, but does not guarantee 100% uptime</li>
                 <li>Planned maintenance will be communicated at least 24 hours in advance where possible</li>
-                <li>Force majeure events (including Meta API outages, Vercel incidents, or Supabase downtime) do not constitute a breach by IZG Solutions</li>
+                <li>Force majeure events (including Meta API outages, wallet provider changes by Apple, Google, or Samsung, Vercel incidents, or Supabase downtime) do not constitute a breach by IZG Solutions</li>
               </ul>
             </section>
 
@@ -128,6 +130,22 @@ export default function TermsPage() {
               <p className="mt-2">
                 IZG Solutions will assist the client in responding to data subject
                 requests to the extent technically feasible.
+              </p>
+
+              <h3 className="text-base font-medium text-surface-800 mt-4 mb-2">
+                Digital business card details
+              </h3>
+              <p>
+                Where a client provides contact details for a digital business
+                card, including details of their employees or representatives, the
+                client warrants that they have the right and any necessary consent
+                to provide those details and to have them published on a publicly
+                accessible card. The client understands that a digital business
+                card is designed to be shared publicly and that the contact
+                details on it can be viewed and saved by anyone who scans or opens
+                the card. The client is responsible for keeping card details
+                accurate and for requesting removal when a person is no longer
+                authorised to be represented.
               </p>
             </section>
 
@@ -225,7 +243,10 @@ export default function TermsPage() {
                 chatbot flow configuration) belongs to the client and will be
                 provided on request if the engagement ends. End-customer
                 conversation data will be deleted within 30 days of termination
-                unless otherwise requested by the client.
+                unless otherwise requested by the client. Where a digital business
+                card subscription ends or is not renewed, the card and any
+                associated wallet passes will be deactivated and the card data
+                deleted within 30 days, unless otherwise requested by the client.
               </p>
             </section>
 
