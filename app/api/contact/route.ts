@@ -1,7 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 /**
  * Submit lead data to the IZG Admin Console.
@@ -47,76 +44,108 @@ async function submitLead(payload: {
   }
 }
 
+// Human-friendly labels for the contact form's service values.
+const SERVICE_LABELS: Record<string, string> = {
+  "digital-business-card": "Digital Business Card",
+  website: "Professional Website",
+  chatbot: "WhatsApp Chatbot",
+  both: "Website + Chatbot",
+  custom: "Custom Digital Solution",
+  other: "Something else",
+};
+
+/**
+ * Send the lead notification email via the IZG Mail Service.
+ * Fire-and-forget friendly: returns false on failure, never throws.
+ */
+async function sendLeadEmail(payload: {
+  name: string;
+  email: string;
+  phone: string;
+  service: string;
+  message: string;
+}): Promise<boolean> {
+  const mailUrl = process.env.IZG_MAIL_URL;
+  const mailToken = process.env.IZG_MAIL_TOKEN;
+
+  if (!mailUrl || !mailToken) {
+    console.warn("IZG Mail Service not configured, skipping email");
+    return false;
+  }
+
+  // Dev override: when set, all mail goes to this inbox regardless of the
+  // real recipient. The intended recipient (info@) is still shown in the body.
+  const overrideTo = process.env.IZG_MAIL_OVERRIDE_TO;
+  const realRecipient = process.env.EMAIL_TO || "info@izgsolutions.co.za";
+
+  try {
+    const res = await fetch(mailUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-izg-token": mailToken,
+      },
+      body: JSON.stringify({
+        to: overrideTo || realRecipient,
+        replyTo: payload.email,
+        subject: `New Contact: ${payload.name} - ${payload.service}`,
+        template: "website-lead",
+        variables: {
+          name: payload.name,
+          email: payload.email,
+          phone: payload.phone || "Not provided",
+          service: payload.service,
+          message: payload.message,
+        },
+        tags: { source: "website_form" },
+      }),
+    });
+
+    if (!res.ok) {
+      const error = await res.json().catch(() => ({}));
+      console.error("[email] Send failed:", res.status, error);
+      return false;
+    }
+
+    return true;
+  } catch (err) {
+    console.error("[email] Network error:", err);
+    return false;
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const { name, email, phone, service, message } = body;
 
-    const appEnv = process.env.APP_ENV || "local";
-    const isProduction = appEnv === "production";
-    const subjectPrefix = isProduction ? "" : `[${appEnv.toUpperCase()}] `;
+    const serviceLabel = SERVICE_LABELS[service] || service || "General enquiry";
 
-    // Submit lead before sending email
+    // Submit lead to the Admin Console before sending email
     console.log("Attempting lead submission...");
     await submitLead({
       contact_name: name,
       contact_email: email,
       contact_phone: phone || undefined,
-      what_they_need: service || "General enquiry",
+      what_they_need: serviceLabel,
       notes: message,
     });
 
-    // Build recipient list — add test recipients in non-production environments
-    const recipients: string[] = [process.env.EMAIL_TO!];
-    if (!isProduction) {
-      recipients.push("accadimo@gmail.com", "makgamathampho@gmail.com");
-    }
-
-    const { data, error } = await resend.emails.send({
-      from: process.env.EMAIL_FROM!,
-      to: recipients,
-      replyTo: email,
-      subject: `${subjectPrefix}New Contact: ${name} - ${service || "General enquiry"}`,
-      html: `
-        ${!isProduction ? `<p style="background: #fef3c7; padding: 8px 12px; border-radius: 4px; font-size: 12px; color: #92400e;"><strong>Environment:</strong> ${appEnv.toUpperCase()}</p>` : ""}
-        <h2 style="margin-top: 16px;">New Contact Form Submission</h2>
-        <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
-          <tr>
-            <td style="padding: 8px 12px; font-weight: bold; border-bottom: 1px solid #eee;">Name</td>
-            <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${name}</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px 12px; font-weight: bold; border-bottom: 1px solid #eee;">Email</td>
-            <td style="padding: 8px 12px; border-bottom: 1px solid #eee;"><a href="mailto:${email}">${email}</a></td>
-          </tr>
-          <tr>
-            <td style="padding: 8px 12px; font-weight: bold; border-bottom: 1px solid #eee;">Phone</td>
-            <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${phone || "Not provided"}</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px 12px; font-weight: bold; border-bottom: 1px solid #eee;">Service</td>
-            <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${service || "Not selected"}</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px 12px; font-weight: bold; vertical-align: top;">Message</td>
-            <td style="padding: 8px 12px;">${message.replace(/\n/g, "<br>")}</td>
-          </tr>
-        </table>
-        <p style="color: #888; font-size: 12px; margin-top: 20px;">
-          Sent from the IZG website contact form at ${new Date().toLocaleString("en-ZA", { timeZone: "Africa/Johannesburg" })}
-        </p>
-      `,
+    // Send the notification email via the IZG Mail Service
+    const emailSent = await sendLeadEmail({
+      name,
+      email,
+      phone,
+      service: serviceLabel,
+      message,
     });
 
-    if (error) {
-      console.error("Resend error:", JSON.stringify(error, null, 2));
-      return NextResponse.json(
-        { success: false, error: "Failed to send message" },
-        { status: 500 }
-      );
+    if (!emailSent) {
+      // The lead was still captured by the Admin Console, so surface success
+      // to the user but log the email failure for follow-up.
+      console.error("Contact email was not sent (see logs above)");
     }
 
-    console.log("Resend response:", JSON.stringify(data, null, 2));
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Contact form error:", error);
