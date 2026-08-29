@@ -4,6 +4,7 @@ import {
   Globe,
   MessageCircle,
   FileText,
+  CreditCard,
   Clock,
   Shield,
   Zap,
@@ -66,7 +67,7 @@ export default function Home() {
               What We Do
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-surface-900 mb-4">
-              Three pillars. One goal.
+              Four ways we help. One goal.
             </h2>
             <p className="text-surface-500 max-w-2xl mb-14 text-lg">
               We give small and medium businesses the digital capability of much
@@ -74,7 +75,7 @@ export default function Home() {
             </p>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <AnimatedSection delay={0.1}>
               <div className="group p-8 rounded-2xl border border-surface-100 hover:border-primary-200 hover:shadow-lg transition-all duration-300">
                 <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-100 transition-colors">
@@ -113,6 +114,28 @@ export default function Home() {
                   software can&apos;t.
                 </p>
               </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.4}>
+              <TrackedLink
+                href="/digital-cards"
+                event="card_click"
+                properties={{ card: "digital_business_cards", page: "/" }}
+                className="group block p-8 rounded-2xl border border-surface-100 hover:border-primary-200 hover:shadow-lg transition-all duration-300 h-full"
+              >
+                <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-100 transition-colors">
+                  <CreditCard className="text-primary-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold mb-3">Digital Business Cards</h3>
+                <p className="text-surface-500 text-sm leading-relaxed">
+                  Smart cards that share your contact with one QR scan and live
+                  in Apple, Google &amp; Samsung Wallet. Always current, never
+                  reprinted.
+                </p>
+                <span className="inline-flex items-center gap-1 text-primary-600 text-sm font-medium mt-4 group-hover:gap-2 transition-all">
+                  See it live <ArrowRight size={15} />
+                </span>
+              </TrackedLink>
             </AnimatedSection>
           </div>
         </div>

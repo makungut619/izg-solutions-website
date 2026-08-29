@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | IZG Solutions",
   },
   description:
-    "Professional websites and WhatsApp chatbot automation for small and medium businesses in South Africa. We build your digital presence and automate customer engagement 24/7.",
+    "Professional websites, WhatsApp chatbot automation, and digital business cards for small and medium businesses in South Africa. We build your digital presence and automate customer engagement 24/7.",
   keywords: [
     "website development South Africa",
     "website development Centurion",
@@ -42,6 +42,12 @@ export const metadata: Metadata = {
     "digital catalogue",
     "custom digital solutions South Africa",
     "ecommerce website South Africa",
+    "digital business card South Africa",
+    "digital business cards Centurion",
+    "QR code business card",
+    "Apple Wallet business card",
+    "smart business card South Africa",
+    "contactless business card",
   ],
   authors: [{ name: "IZG Solutions" }],
   creator: "IZG Solutions",
@@ -66,7 +72,7 @@ export const metadata: Metadata = {
     siteName: "IZG Solutions",
     title: "IZG Solutions | Your Business, Always On",
     description:
-      "Professional websites and WhatsApp chatbot automation for small and medium businesses in South Africa.",
+      "Professional websites, WhatsApp chatbot automation, and digital business cards for small and medium businesses in South Africa.",
     images: [
       {
         url: "/og-image.jpg",
@@ -80,7 +86,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "IZG Solutions | Your Business, Always On",
     description:
-      "Professional websites and WhatsApp chatbot automation for small and medium businesses in South Africa.",
+      "Professional websites, WhatsApp chatbot automation, and digital business cards for small and medium businesses in South Africa.",
     images: ["/twitter-card.jpg"],
   },
   robots: {
@@ -117,7 +123,7 @@ export default function RootLayout({
     logo: "https://www.izgsolutions.co.za/schema-logo.png",
     image: "https://www.izgsolutions.co.za/og-image.jpg",
     description:
-      "Professional websites and WhatsApp chatbot automation for small and medium businesses in South Africa.",
+      "Professional websites, WhatsApp chatbot automation, and digital business cards for small and medium businesses in South Africa.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Centurion",
@@ -136,7 +142,7 @@ export default function RootLayout({
       email: "info@izgsolutions.co.za",
       availableLanguage: ["English"],
     },
-    priceRange: "R3000 - R12000",
+    priceRange: "R259 - R12000",
     areaServed: [
       {
         "@type": "Country",

@@ -269,6 +269,7 @@ export default function ContactPage() {
                         className="w-full px-4 py-2.5 rounded-lg border border-surface-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all text-sm bg-white"
                       >
                         <option value="">Select a service</option>
+                        <option value="digital-business-card">Digital Business Card</option>
                         <option value="website">Professional Website</option>
                         <option value="chatbot">WhatsApp Chatbot</option>
                         <option value="both">Website + Chatbot</option>

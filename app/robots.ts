@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/gate"],
+      disallow: ["/api/"],
     },
     sitemap: "https://www.izgsolutions.co.za/sitemap.xml",
   };
