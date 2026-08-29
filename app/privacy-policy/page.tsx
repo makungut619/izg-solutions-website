@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p className="text-surface-400 text-sm mb-10">
-            Last updated: June 2026
+            Last updated: August 2026
           </p>
 
           <div className="prose prose-surface max-w-none space-y-8 text-surface-600 leading-relaxed text-sm">
@@ -61,9 +61,11 @@ export default function PrivacyPolicyPage() {
                 <li>Session state (which stage of the conversation they are in)</li>
               </ul>
               <p className="mt-2">
-                We do not collect names, profile photos, or any other personal
-                details from end-customers beyond what is included in WhatsApp
-                message payloads.
+                For chatbot end-customers specifically, we do not collect names,
+                profile photos, or any other personal details beyond what is
+                included in WhatsApp message payloads. (Digital business card
+                information, described in section D below, is provided
+                separately and deliberately by the cardholder or their business.)
               </p>
 
               <h3 className="text-base font-medium text-surface-800 mt-4 mb-2">
@@ -78,6 +80,34 @@ export default function PrivacyPolicyPage() {
                 <li>Technical data such as IP address, browser type, and device information</li>
                 <li>Cookie and usage data (see our Cookie Policy below)</li>
               </ul>
+
+              <h3 className="text-base font-medium text-surface-800 mt-4 mb-2">
+                D) Digital Business Card Information
+              </h3>
+              <p>
+                When you or your business engage our Digital Business Cards
+                service, we collect the contact details you provide to build and
+                host the card. This typically includes:
+              </p>
+              <ul className="list-disc pl-5 mt-2 space-y-1">
+                <li>Full name and job title</li>
+                <li>Company or business name</li>
+                <li>Phone number(s)</li>
+                <li>Email address(es)</li>
+                <li>Physical or business address</li>
+                <li>Profile photo and company logo</li>
+                <li>Website and social media links</li>
+                <li>Scan and interaction analytics (e.g. how many times a card was viewed or saved)</li>
+              </ul>
+              <p className="mt-2">
+                <strong>Public visibility:</strong> a digital business card is
+                designed to be shared. The contact details on a card are made
+                publicly accessible to anyone who scans its QR code or opens its
+                link, and are delivered to them as a downloadable contact (vCard)
+                file. Where a wallet pass is added, the relevant card details are
+                also shared with the wallet provider (Apple, Google, or Samsung).
+                Only provide details you are comfortable sharing publicly.
+              </p>
             </section>
 
             <section>
@@ -90,6 +120,8 @@ export default function PrivacyPolicyPage() {
                 <li>Prepare quotations and service agreements</li>
                 <li>Communicate with you about projects and deliverables</li>
                 <li>Operate and maintain our WhatsApp chatbot platform on behalf of business clients</li>
+                <li>Generate, host, and publicly display digital business cards and wallet passes, and serve contact (vCard) files to people who scan or open a card</li>
+                <li>Provide scan and interaction analytics for digital business cards</li>
                 <li>Improve our website and services</li>
                 <li>Comply with legal obligations</li>
               </ul>
@@ -157,6 +189,14 @@ export default function PrivacyPolicyPage() {
                 on behalf of the client, who remains the Responsible Party for
                 their customers&apos; data.
               </p>
+              <p className="mt-2">
+                For digital business card information hosted on behalf of a
+                business client (for example, cards created for their staff), IZG
+                Solutions acts as an Operator (data processor) and the client is
+                the Responsible Party. Where an individual engages us directly for
+                their own card, we act as the Responsible Party for that card
+                data.
+              </p>
             </section>
 
             <section>
@@ -198,13 +238,28 @@ export default function PrivacyPolicyPage() {
                     </tr>
                     <tr className="border-b border-surface-100">
                       <td className="py-2 pr-4">Supabase, Inc.</td>
-                      <td className="py-2 pr-4">Cloud database, stores sessions, messages, and customer records</td>
+                      <td className="py-2 pr-4">Cloud database, stores sessions, messages, customer records, and digital business card data</td>
                       <td className="py-2 pr-4">EU (Ireland)</td>
                     </tr>
                     <tr className="border-b border-surface-100">
                       <td className="py-2 pr-4">Vercel, Inc.</td>
                       <td className="py-2 pr-4">Application hosting and serverless functions</td>
                       <td className="py-2 pr-4">United States</td>
+                    </tr>
+                    <tr className="border-b border-surface-100">
+                      <td className="py-2 pr-4">Apple Inc.</td>
+                      <td className="py-2 pr-4">Apple Wallet passes for digital business cards (where used)</td>
+                      <td className="py-2 pr-4">United States</td>
+                    </tr>
+                    <tr className="border-b border-surface-100">
+                      <td className="py-2 pr-4">Google LLC</td>
+                      <td className="py-2 pr-4">Google Wallet passes for digital business cards (where used)</td>
+                      <td className="py-2 pr-4">United States</td>
+                    </tr>
+                    <tr className="border-b border-surface-100">
+                      <td className="py-2 pr-4">Samsung Electronics Co., Ltd.</td>
+                      <td className="py-2 pr-4">Samsung Wallet passes for digital business cards (where used)</td>
+                      <td className="py-2 pr-4">South Korea</td>
                     </tr>
                   </tbody>
                 </table>
@@ -286,6 +341,10 @@ export default function PrivacyPolicyPage() {
                       <td className="py-2 pr-4">Contact form submissions</td>
                       <td className="py-2 pr-4">12 months</td>
                     </tr>
+                    <tr className="border-b border-surface-100">
+                      <td className="py-2 pr-4">Digital business card data</td>
+                      <td className="py-2 pr-4">Duration of the card subscription + 30 days</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -362,7 +421,22 @@ export default function PrivacyPolicyPage() {
 
             <section>
               <h2 className="text-lg font-semibold text-surface-900 mb-3">
-                14. Changes to This Policy
+                14. Children and Minors
+              </h2>
+              <p>
+                Our services are intended for businesses and adults. We do not
+                knowingly collect personal information of children under the age
+                of 18 except where it is provided by a parent, guardian, or
+                business for a legitimate purpose (for example, a digital business
+                card requested on behalf of an individual). If you believe we
+                hold information about a minor that should not have been
+                collected, contact us and we will remove it.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-lg font-semibold text-surface-900 mb-3">
+                15. Changes to This Policy
               </h2>
               <p>
                 We may update this Privacy Policy from time to time. Changes will
@@ -373,7 +447,7 @@ export default function PrivacyPolicyPage() {
 
             <section>
               <h2 className="text-lg font-semibold text-surface-900 mb-3">
-                15. Contact Us
+                16. Contact Us
               </h2>
               <p>
                 If you have questions about this Privacy Policy or wish to
