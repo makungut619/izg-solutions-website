@@ -142,7 +142,7 @@ export default function RootLayout({
       email: "info@izgsolutions.co.za",
       availableLanguage: ["English"],
     },
-    priceRange: "R259 - R12000",
+    priceRange: "R249 - R12000",
     areaServed: [
       {
         "@type": "Country",
