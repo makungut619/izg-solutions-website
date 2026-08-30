@@ -133,7 +133,7 @@ const chatbotTiers = [
 ];
 
 const cardIndividual = {
-  setup: "R259",
+  setup: "R249",
   annual: "R99",
   features: [
     "Branded digital card + QR code",
@@ -151,7 +151,7 @@ const cardIndividual = {
 const cardVolumeTiers = [
   {
     range: "1 – 50 cards",
-    setup: "R259",
+    setup: "R249",
     annual: "R99",
     note: "per card",
   },
@@ -300,7 +300,7 @@ export default function PricingPage() {
         name: "How does digital business card pricing work?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Each card has a once-off setup fee (from R259) plus a small annual fee (from R99/year) to keep it live and editable. For teams, both the setup and annual fee drop per card as you order more: R99/year for 1-50 cards, R67 for 51-100, and R50 for 101 or more.",
+          text: "Each card has a once-off setup fee (from R249) plus a small annual fee (from R99/year) to keep it live and editable. For teams, both the setup and annual fee drop per card as you order more: R99/year for 1-50 cards, R67 for 51-100, and R50 for 101 or more.",
         },
       },
     ],
@@ -363,7 +363,7 @@ export default function PricingPage() {
                 </p>
                 <div className="mb-1">
                   <span className="text-3xl font-bold text-surface-900">
-                    R259
+                    R249
                   </span>
                   <span className="text-surface-400 text-sm ml-1">
                     once-off setup
@@ -781,7 +781,7 @@ export default function PricingPage() {
                 },
                 {
                   q: "How does digital business card pricing work?",
-                  a: "Each card has a once-off setup fee (from R259) plus a small annual fee (from R99/year) to keep it live and editable. For teams, both the setup and annual fee drop per card as you order more: R99/year for 1-50 cards, R67 for 51-100, and R50 for 101 or more.",
+                  a: "Each card has a once-off setup fee (from R249) plus a small annual fee (from R99/year) to keep it live and editable. For teams, both the setup and annual fee drop per card as you order more: R99/year for 1-50 cards, R67 for 51-100, and R50 for 101 or more.",
                 },
               ].map((item) => (
                 <div key={item.q} className="border-b border-surface-100 pb-5">
