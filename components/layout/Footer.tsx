@@ -26,6 +26,7 @@ export default function Footer() {
                 { href: "/services", label: "Services", item: "services" },
                 { href: "/digital-cards", label: "Digital Cards", item: "digital_cards" },
                 { href: "/pricing", label: "Pricing", item: "pricing" },
+                { href: "/work", label: "Work", item: "work" },
                 { href: "/about", label: "About", item: "about" },
                 { href: "/contact", label: "Contact", item: "contact" },
               ].map((link) => (
