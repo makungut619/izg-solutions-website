@@ -104,9 +104,9 @@ export const projects: Project[] = [
     icon: Globe,
     industry: "MC & Live Entertainment",
     result:
-      "A black-tie showcase that lets a top MC book premium weddings, galas and corporate events.",
+      "A black-tie showcase that helps a top MC get booked for premium weddings, galas and corporate events.",
     description:
-      "Dark, dramatic and gold, built to match the showmanship. Services, gallery, and a clear booking path across every screen.",
+      "Dark, dramatic and gold, built to match the showmanship. Services, gallery, and an easy way for clients to book him across every screen.",
     accent: "#2D2D2D",
     image: "/work/ntosh-events.png",
     liveUrl: "https://www.ntoshevents.co.za",

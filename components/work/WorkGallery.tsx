@@ -170,9 +170,11 @@ export default function WorkGallery() {
   }, []);
 
   const gridProjects = useMemo(() => {
-    const rest = allProjects.filter((p) => !p.featured);
-    if (filter === "All") return rest;
-    return rest.filter((p) => p.category === filter);
+    // On "All", the featured project is shown as a large hero above the grid,
+    // so exclude it here. On any category filter there is no hero, so include
+    // every matching project (featured included) as a normal card.
+    if (filter === "All") return allProjects.filter((p) => !p.featured);
+    return allProjects.filter((p) => p.category === filter);
   }, [filter]);
 
   const showFeatured = filter === "All" && featured;
