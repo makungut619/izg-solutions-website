@@ -39,6 +39,15 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
+      keyframes: {
+        "cards-marquee": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        "cards-marquee": "cards-marquee 40s linear infinite",
+      },
     },
   },
   plugins: [],

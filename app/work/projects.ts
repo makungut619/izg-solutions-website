@@ -2,6 +2,7 @@ import { Globe, type LucideIcon } from "lucide-react";
 
 export type WorkCategory =
   | "Website"
+  | "Digital Card"
   | "WhatsApp Chatbot"
   | "Custom Digital Solution";
 
@@ -34,8 +35,65 @@ export interface Project {
 export const categories: { label: string; value: WorkCategory | "All" }[] = [
   { label: "All", value: "All" },
   { label: "Websites", value: "Website" },
+  { label: "Digital Cards", value: "Digital Card" },
   { label: "WhatsApp Chatbots", value: "WhatsApp Chatbot" },
   { label: "Custom Solutions", value: "Custom Digital Solution" },
+];
+
+export interface DigitalCard {
+  slug: string;
+  /** Person's name (used for alt text only; card image shows full details). */
+  name: string;
+  /** Phone mockup image, path under /public. */
+  image: string;
+}
+
+/**
+ * Individual digital business cards, shown together inside one shared
+ * "Digital Cards" tile on the Work page (many cards, one container).
+ * QR codes in these mockups are decorative/fake for POPIA compliance.
+ */
+export const digitalCards: DigitalCard[] = [
+  {
+    slug: "noluthando-dlamini",
+    name: "Noluthando Dlamini",
+    image: "/work/cards/noluthando-dlamini-card.png",
+  },
+  {
+    slug: "lohu-makgamatha",
+    name: "Lohu Makgamatha",
+    image: "/work/cards/lohu-makgamatha-card.png",
+  },
+  {
+    slug: "sean-zimunya",
+    name: "Sean Zimunya",
+    image: "/work/cards/sean-zimunya-card.png",
+  },
+  {
+    slug: "nduduzo-simelane",
+    name: "Nduduzo Simelane",
+    image: "/work/cards/nduduzo-simelane-card.png",
+  },
+  {
+    slug: "nkambenhle-simelane",
+    name: "Nkambenhle Simelane",
+    image: "/work/cards/nkambenhle-simelane-card.png",
+  },
+  {
+    slug: "ntokozo-mthembu",
+    name: "Ntokozo Mthembu",
+    image: "/work/cards/ntokozo-mthembu-card.png",
+  },
+  {
+    slug: "parthenope-maturure",
+    name: "Parthenope Maturure",
+    image: "/work/cards/parthenope-maturure-card.png",
+  },
+  {
+    slug: "thabiso-mdluli",
+    name: "Thabiso Mdluli",
+    image: "/work/cards/thabiso-mdluli-card.png",
+  },
 ];
 
 export const projects: Project[] = [

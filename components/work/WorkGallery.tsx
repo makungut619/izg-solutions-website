@@ -5,8 +5,10 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import DigitalCardsShowcase from "@/components/work/DigitalCardsShowcase";
 import {
   categories,
+  digitalCards,
   projects as allProjects,
   type Project,
   type WorkCategory,
@@ -154,10 +156,11 @@ export default function WorkGallery() {
     []
   );
 
-  // Only show filter tabs for categories that actually have projects.
+  // Only show filter tabs for categories that actually have content.
   // "All" always shows when there is more than one populated category.
   const visibleCategories = useMemo(() => {
-    const present = new Set(allProjects.map((p) => p.category));
+    const present = new Set<WorkCategory>(allProjects.map((p) => p.category));
+    if (digitalCards.length > 0) present.add("Digital Card");
     const populated = categories.filter(
       (c) => c.value !== "All" && present.has(c.value as WorkCategory)
     );
@@ -173,6 +176,9 @@ export default function WorkGallery() {
   }, [filter]);
 
   const showFeatured = filter === "All" && featured;
+  const showCards =
+    (filter === "All" || filter === "Digital Card") && digitalCards.length > 0;
+  const isEmpty = gridProjects.length === 0 && !showCards && !showFeatured;
 
   return (
     <div className="container-narrow">
@@ -211,24 +217,33 @@ export default function WorkGallery() {
       )}
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <AnimatePresence mode="popLayout">
-          {gridProjects.map((project, i) => (
-            <motion.div
-              key={project.slug}
-              layout
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.35, delay: i * 0.05, ease: "easeOut" }}
-            >
-              <ProjectCard project={project} />
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </div>
+      {gridProjects.length > 0 && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <AnimatePresence mode="popLayout">
+            {gridProjects.map((project, i) => (
+              <motion.div
+                key={project.slug}
+                layout
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.35, delay: i * 0.05, ease: "easeOut" }}
+              >
+                <ProjectCard project={project} />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+      )}
 
-      {gridProjects.length === 0 && (
+      {/* Digital cards showcase (full-width shared tile) */}
+      {showCards && (
+        <AnimatedSection className={gridProjects.length > 0 ? "mt-8" : ""}>
+          <DigitalCardsShowcase />
+        </AnimatedSection>
+      )}
+
+      {isEmpty && (
         <p className="text-surface-400 text-center py-12">
           No projects in this category yet.
         </p>
