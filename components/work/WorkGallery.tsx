@@ -211,6 +211,13 @@ export default function WorkGallery() {
         </AnimatedSection>
       )}
 
+      {/* Digital cards showcase first (full-width shared tile) */}
+      {showCards && (
+        <AnimatedSection className="mb-8">
+          <DigitalCardsShowcase />
+        </AnimatedSection>
+      )}
+
       {/* Featured (only on All) */}
       {showFeatured && (
         <AnimatedSection className="mb-8">
@@ -236,13 +243,6 @@ export default function WorkGallery() {
             ))}
           </AnimatePresence>
         </div>
-      )}
-
-      {/* Digital cards showcase (full-width shared tile) */}
-      {showCards && (
-        <AnimatedSection className={gridProjects.length > 0 ? "mt-8" : ""}>
-          <DigitalCardsShowcase />
-        </AnimatedSection>
       )}
 
       {isEmpty && (

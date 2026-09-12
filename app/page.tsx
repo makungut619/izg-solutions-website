@@ -71,46 +71,6 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <AnimatedSection delay={0.1}>
-              <div className="group p-8 rounded-2xl border border-surface-100 hover:border-primary-200 hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-100 transition-colors">
-                  <Globe className="text-primary-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold mb-3">Professional Websites</h3>
-                <p className="text-surface-500 text-sm leading-relaxed">
-                  Modern, responsive websites that make your business look
-                  credible and rank on Google. Built fast, designed to convert.
-                </p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.2}>
-              <div className="group p-8 rounded-2xl border border-surface-100 hover:border-primary-200 hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-100 transition-colors">
-                  <MessageCircle className="text-primary-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold mb-3">WhatsApp Automation</h3>
-                <p className="text-surface-500 text-sm leading-relaxed">
-                  Automated WhatsApp assistants that take orders, book
-                  appointments, answer questions, and capture leads, 24/7.
-                </p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.3}>
-              <div className="group p-8 rounded-2xl border border-surface-100 hover:border-primary-200 hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-100 transition-colors">
-                  <FileText className="text-primary-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold mb-3">Custom Digital Solutions</h3>
-                <p className="text-surface-500 text-sm leading-relaxed">
-                  Tailored IT solutions for your unique business needs. From PDF
-                  catalogues to custom integrations, we build what off-the-shelf
-                  software can&apos;t.
-                </p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.4}>
               <TrackedLink
                 href="/digital-cards"
                 event="card_click"
@@ -130,6 +90,46 @@ export default function Home() {
                   See it live <ArrowRight size={15} />
                 </span>
               </TrackedLink>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <div className="group p-8 rounded-2xl border border-surface-100 hover:border-primary-200 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-100 transition-colors">
+                  <Globe className="text-primary-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold mb-3">Professional Websites</h3>
+                <p className="text-surface-500 text-sm leading-relaxed">
+                  Modern, responsive websites that make your business look
+                  credible and rank on Google. Built fast, designed to convert.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.3}>
+              <div className="group p-8 rounded-2xl border border-surface-100 hover:border-primary-200 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-100 transition-colors">
+                  <MessageCircle className="text-primary-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold mb-3">WhatsApp Automation</h3>
+                <p className="text-surface-500 text-sm leading-relaxed">
+                  Automated WhatsApp assistants that take orders, book
+                  appointments, answer questions, and capture leads, 24/7.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.4}>
+              <div className="group p-8 rounded-2xl border border-surface-100 hover:border-primary-200 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-100 transition-colors">
+                  <FileText className="text-primary-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold mb-3">Custom Digital Solutions</h3>
+                <p className="text-surface-500 text-sm leading-relaxed">
+                  Tailored IT solutions for your unique business needs. From PDF
+                  catalogues to custom integrations, we build what off-the-shelf
+                  software can&apos;t.
+                </p>
+              </div>
             </AnimatedSection>
           </div>
         </div>

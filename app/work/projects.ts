@@ -34,8 +34,8 @@ export interface Project {
 
 export const categories: { label: string; value: WorkCategory | "All" }[] = [
   { label: "All", value: "All" },
-  { label: "Websites", value: "Website" },
   { label: "Digital Cards", value: "Digital Card" },
+  { label: "Websites", value: "Website" },
   { label: "WhatsApp Chatbots", value: "WhatsApp Chatbot" },
   { label: "Custom Solutions", value: "Custom Digital Solution" },
 ];
