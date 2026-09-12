@@ -94,6 +94,11 @@ export const digitalCards: DigitalCard[] = [
     name: "Thabiso Mdluli",
     image: "/work/cards/thabiso-mdluli-card.png",
   },
+  {
+    slug: "nqobile-thabede",
+    name: "Nqobile Thabede",
+    image: "/work/cards/nqobile-thabede-card.png",
+  },
 ];
 
 export const projects: Project[] = [
