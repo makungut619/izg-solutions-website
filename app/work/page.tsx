@@ -6,12 +6,72 @@ import WorkGallery from "@/components/work/WorkGallery";
 export const metadata = {
   title: "Our Work",
   description:
-    "See what we've built. Websites, WhatsApp chatbots, and custom digital solutions for real businesses.",
+    "See what we've built for South African businesses: professional websites and branded digital business cards for law firms, consultancies, churches, events and more.",
+  keywords: [
+    "web design portfolio South Africa",
+    "website examples South Africa",
+    "digital business card examples",
+    "website developer Centurion portfolio",
+    "web design Gauteng examples",
+    "law firm website South Africa",
+    "church website South Africa",
+    "business website portfolio",
+  ],
+  openGraph: {
+    title: "Our Work | IZG Solutions",
+    description:
+      "A selection of websites and digital business cards we've built for real South African businesses.",
+    url: "https://www.izgsolutions.co.za/work",
+  },
+  alternates: {
+    canonical: "https://www.izgsolutions.co.za/work",
+  },
 };
 
 export default function WorkPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Our Work",
+    description:
+      "A selection of websites and digital business cards built by IZG Solutions for South African businesses.",
+    url: "https://www.izgsolutions.co.za/work",
+    isPartOf: {
+      "@type": "WebSite",
+      name: "IZG Solutions",
+      url: "https://www.izgsolutions.co.za",
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Ntosh Events",
+          url: "https://www.ntoshevents.co.za",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "GBM Buhle Park",
+          url: "https://www.gbmbuhlepark.co.za",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Makgamatha Attorneys",
+          url: "https://www.makgamatha.co.za",
+        },
+      ],
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <section className="section-padding pt-32 bg-surface-50">
         <div className="container-narrow">
