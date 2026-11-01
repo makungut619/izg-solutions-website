@@ -10,9 +10,9 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/digital-cards", label: "Digital Cards" },
+  { href: "/whatsapp-chatbots", label: "Chatbots" },
   { href: "/pricing", label: "Pricing" },
   { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 

@@ -264,7 +264,7 @@ export default function ServicesPage() {
               {
                 icon: Smartphone,
                 title: "Customer Service & FAQs",
-                desc: "Answer common questions, route enquiries, capture leads, and hand off to a human when needed.",
+                desc: "Answer common questions, route enquiries, capture leads, and notify you by email when a customer wants a person.",
               },
               {
                 icon: BarChart3,
@@ -315,6 +315,15 @@ export default function ServicesPage() {
                 ))}
               </div>
             </div>
+          </AnimatedSection>
+
+          <AnimatedSection>
+            <Link
+              href="/whatsapp-chatbots"
+              className="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 transition-colors mt-10"
+            >
+              See chatbots in action <ArrowRight size={18} />
+            </Link>
           </AnimatedSection>
         </div>
       </section>

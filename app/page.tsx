@@ -9,6 +9,9 @@ import {
   Shield,
   Zap,
   ArrowRight,
+  Target,
+  Users,
+  Lightbulb,
 } from "lucide-react";
 
 export const metadata = {
@@ -112,7 +115,12 @@ export default function Home() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.3}>
-              <div className="group p-8 rounded-2xl border border-surface-100 hover:border-primary-200 hover:shadow-lg transition-all duration-300">
+              <TrackedLink
+                href="/whatsapp-chatbots"
+                event="card_click"
+                properties={{ card: "whatsapp_automation", page: "/" }}
+                className="group block p-8 rounded-2xl border border-surface-100 hover:border-primary-200 hover:shadow-lg transition-all duration-300 h-full"
+              >
                 <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-100 transition-colors">
                   <MessageCircle className="text-primary-600" size={24} />
                 </div>
@@ -121,7 +129,10 @@ export default function Home() {
                   Automated WhatsApp assistants that take orders, book
                   appointments, answer questions, and capture leads, 24/7.
                 </p>
-              </div>
+                <span className="inline-flex items-center gap-1 text-primary-600 text-sm font-medium mt-4 group-hover:gap-2 transition-all">
+                  See it in action <ArrowRight size={15} />
+                </span>
+              </TrackedLink>
             </AnimatedSection>
 
             <AnimatedSection delay={0.4}>
@@ -236,6 +247,74 @@ export default function Home() {
                 </div>
               </AnimatedSection>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="section-padding bg-surface-50 scroll-mt-20">
+        <div className="container-narrow">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <AnimatedSection>
+              <p className="text-primary-600 text-sm font-medium uppercase tracking-widest mb-3">
+                About Us
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-surface-900 mb-6">
+                Every business deserves to look professional online.
+              </h2>
+              <div className="space-y-4 text-surface-600 leading-relaxed">
+                <p>
+                  Small businesses in South Africa are expected to have a
+                  professional online presence and respond to customers
+                  instantly, all while running the actual business. Most
+                  can&apos;t afford a full-time developer or marketing team, so
+                  they end up with a weak Facebook page, missed WhatsApp
+                  messages, and customers who move on to someone who looks more
+                  established.
+                </p>
+                <p>
+                  We built IZG Solutions to close that gap. We&apos;re a focused
+                  team in Centurion, Gauteng, using proven templates and
+                  automation to deliver premium results fast, without agency
+                  prices. We speak your language, understand your market, and
+                  build things that actually work.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <div className="space-y-4">
+              {[
+                {
+                  icon: Target,
+                  title: "Practical over perfect",
+                  desc: "We build things that work and deliver value now, not theoretical solutions that take forever to ship.",
+                },
+                {
+                  icon: Users,
+                  title: "Partnership, not transactions",
+                  desc: "We're in it for the long run. Your growth is our growth.",
+                },
+                {
+                  icon: Lightbulb,
+                  title: "Simplicity is the goal",
+                  desc: "Technology should make your life easier. We handle the complexity so you don't have to.",
+                },
+              ].map((item, i) => (
+                <AnimatedSection key={item.title} delay={i * 0.1}>
+                  <div className="flex gap-4 p-6 rounded-2xl bg-white border border-surface-100">
+                    <div className="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <item.icon className="text-primary-600" size={20} />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-1">{item.title}</h3>
+                      <p className="text-surface-500 text-sm leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
           </div>
         </div>
       </section>
