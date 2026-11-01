@@ -6,11 +6,12 @@ import WorkGallery from "@/components/work/WorkGallery";
 export const metadata = {
   title: "Our Work",
   description:
-    "See what we've built for South African businesses: professional websites and branded digital business cards for law firms, consultancies, churches, events and more.",
+    "See what we've built for South African businesses: professional websites, branded digital business cards and WhatsApp chatbots for law firms, contractors, cleaning companies, churches, events and more.",
   keywords: [
     "web design portfolio South Africa",
     "website examples South Africa",
     "digital business card examples",
+    "WhatsApp chatbot examples South Africa",
     "website developer Centurion portfolio",
     "web design Gauteng examples",
     "law firm website South Africa",
@@ -20,7 +21,7 @@ export const metadata = {
   openGraph: {
     title: "Our Work | IZG Solutions",
     description:
-      "A selection of websites and digital business cards we've built for real South African businesses.",
+      "A selection of websites, digital business cards and WhatsApp chatbots we've built for real South African businesses.",
     url: "https://www.izgsolutions.co.za/work",
   },
   alternates: {
@@ -34,7 +35,7 @@ export default function WorkPage() {
     "@type": "CollectionPage",
     name: "Our Work",
     description:
-      "A selection of websites and digital business cards built by IZG Solutions for South African businesses.",
+      "A selection of websites, digital business cards and WhatsApp chatbots built by IZG Solutions for South African businesses.",
     url: "https://www.izgsolutions.co.za/work",
     isPartOf: {
       "@type": "WebSite",
@@ -61,6 +62,12 @@ export default function WorkPage() {
           position: 3,
           name: "Makgamatha Attorneys",
           url: "https://www.makgamatha.co.za",
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          name: "TPM Contracting",
+          url: "https://www.tpmcontracting.co.za",
         },
       ],
     },

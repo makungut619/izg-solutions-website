@@ -65,11 +65,6 @@ export const digitalCards: DigitalCard[] = [
     image: "/work/cards/lohu-makgamatha-card.png",
   },
   {
-    slug: "sean-zimunya",
-    name: "Sean Zimunya",
-    image: "/work/cards/sean-zimunya-card.png",
-  },
-  {
     slug: "nduduzo-simelane",
     name: "Nduduzo Simelane",
     image: "/work/cards/nduduzo-simelane-card.png",
@@ -98,6 +93,74 @@ export const digitalCards: DigitalCard[] = [
     slug: "nqobile-thabede",
     name: "Nqobile Thabede",
     image: "/work/cards/nqobile-thabede-card.png",
+  },
+  {
+    // File is spelled "mthimkhulu"; the card itself reads "Mthimkulu".
+    slug: "lesedi-mthimkhulu",
+    name: "Lesedi Mthimkulu",
+    image: "/work/cards/lesedi-mthimkhulu-card.png",
+  },
+  {
+    slug: "lucky-dhlamini",
+    name: "Lucky Dhlamini",
+    image: "/work/cards/lucky-dhlamini-card.png",
+  },
+];
+
+export interface ChatbotScreen {
+  /** Short step label shown under the phone. */
+  label: string;
+  /** Phone mockup image, path under /public/work/chatbots. */
+  image: string;
+  alt: string;
+}
+
+export interface ChatbotWork {
+  slug: string;
+  name: string;
+  industry: string;
+  /** Outcome-focused one-liner shown on the tile. */
+  result: string;
+  /** Longer supporting description. */
+  description: string;
+  /** Backdrop shown while the mockups load (matches their baked-in background). */
+  accent: string;
+  /** Phone mockups in conversation order. */
+  screens: ChatbotScreen[];
+}
+
+/**
+ * WhatsApp chatbots, shown as shared "WhatsApp Chatbots" tiles on the Work
+ * page (one tile per client, a few phone mockups per tile). Mockups contain
+ * invented customer data only; see .kiro/steering/chatbot-mockup-prompt.md.
+ */
+export const chatbots: ChatbotWork[] = [
+  {
+    slug: "ll-cleaning-solutions",
+    name: "LL Cleaning Solutions",
+    industry: "Cleaning Services",
+    result:
+      "Cleaning quote requests handled on WhatsApp, without anyone tied to the phone.",
+    description:
+      "Customers choose a service, the size of the space and a preferred time, and the team receives the full request by email, ready to quote.",
+    accent: "#bef8f8",
+    screens: [
+      {
+        label: "1. Greeting",
+        image: "/work/chatbots/ll-cleaning-solutions-1-greeting.png",
+        alt: "WhatsApp chatbot greeting a customer and offering the options Book or get a quote, See what we clean, and How it works",
+      },
+      {
+        label: "2. Choose a service",
+        image: "/work/chatbots/ll-cleaning-solutions-2-service.png",
+        alt: "The chatbot asking which cleaning service is needed and how big the space is, with the customer choosing Deep Cleaning and 2-3 bedroom",
+      },
+      {
+        label: "3. Request sent",
+        image: "/work/chatbots/ll-cleaning-solutions-3-result.png",
+        alt: "The chatbot summarising the cleaning request and confirming it has been sent, with the team replying with a quote and a time",
+      },
+    ],
   },
 ];
 
@@ -144,5 +207,19 @@ export const projects: Project[] = [
     accent: "#6B6560",
     image: "/work/makgamatha-attorneys.png",
     liveUrl: "https://www.makgamatha.co.za",
+  },
+  {
+    slug: "tpm-contracting",
+    title: "TPM Contracting",
+    category: "Website",
+    icon: Globe,
+    industry: "HVAC & Refrigeration",
+    result:
+      "A confident, trustworthy home online for a Boksburg contractor serving corporate, commercial and public sector clients.",
+    description:
+      "Deep navy and bright blue, built around five services from air conditioning and refrigeration to electric fencing, boom gates and truck stop, with a clear path to request a quote.",
+    accent: "#1B2740",
+    image: "/work/tpm-contracting.png",
+    liveUrl: "https://www.tpmcontracting.co.za",
   },
 ];

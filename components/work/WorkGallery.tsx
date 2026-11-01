@@ -6,8 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import DigitalCardsShowcase from "@/components/work/DigitalCardsShowcase";
+import ChatbotsShowcase from "@/components/work/ChatbotsShowcase";
 import {
   categories,
+  chatbots,
   digitalCards,
   projects as allProjects,
   type Project,
@@ -161,6 +163,7 @@ export default function WorkGallery() {
   const visibleCategories = useMemo(() => {
     const present = new Set<WorkCategory>(allProjects.map((p) => p.category));
     if (digitalCards.length > 0) present.add("Digital Card");
+    if (chatbots.length > 0) present.add("WhatsApp Chatbot");
     const populated = categories.filter(
       (c) => c.value !== "All" && present.has(c.value as WorkCategory)
     );
@@ -180,7 +183,13 @@ export default function WorkGallery() {
   const showFeatured = filter === "All" && featured;
   const showCards =
     (filter === "All" || filter === "Digital Card") && digitalCards.length > 0;
-  const isEmpty = gridProjects.length === 0 && !showCards && !showFeatured;
+  const showChatbots =
+    (filter === "All" || filter === "WhatsApp Chatbot") && chatbots.length > 0;
+  const isEmpty =
+    gridProjects.length === 0 &&
+    !showCards &&
+    !showChatbots &&
+    !showFeatured;
 
   return (
     <div className="container-narrow">
@@ -218,6 +227,14 @@ export default function WorkGallery() {
         </AnimatedSection>
       )}
 
+      {/* WhatsApp chatbots (own shared tile, one per client) */}
+      {showChatbots &&
+        chatbots.map((bot) => (
+          <AnimatedSection key={bot.slug} className="mb-8">
+            <ChatbotsShowcase bot={bot} />
+          </AnimatedSection>
+        ))}
+
       {/* Featured (only on All) */}
       {showFeatured && (
         <AnimatedSection className="mb-8">
@@ -229,18 +246,29 @@ export default function WorkGallery() {
       {gridProjects.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <AnimatePresence mode="popLayout">
-            {gridProjects.map((project, i) => (
-              <motion.div
-                key={project.slug}
-                layout
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.35, delay: i * 0.05, ease: "easeOut" }}
-              >
-                <ProjectCard project={project} />
-              </motion.div>
-            ))}
+            {gridProjects.map((project, i) => {
+              // An odd final card would sit alone in its row, so let it span
+              // the full width using the wide (featured) layout.
+              const spansRow =
+                gridProjects.length % 2 === 1 && i === gridProjects.length - 1;
+              return (
+                <motion.div
+                  key={project.slug}
+                  layout
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{
+                    duration: 0.35,
+                    delay: i * 0.05,
+                    ease: "easeOut",
+                  }}
+                  className={spansRow ? "md:col-span-2" : undefined}
+                >
+                  <ProjectCard project={project} featured={spansRow} />
+                </motion.div>
+              );
+            })}
           </AnimatePresence>
         </div>
       )}
