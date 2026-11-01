@@ -2,7 +2,11 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export const metadata = {
   title: "Privacy Policy",
-  description: "Privacy policy for IZG Solutions (Pty) Ltd.",
+  description:
+    "Privacy policy for IZG Solutions (Pty) Ltd. How we collect, use, and protect your personal information in accordance with POPIA.",
+  alternates: {
+    canonical: "https://www.izgsolutions.co.za/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicyPage() {
