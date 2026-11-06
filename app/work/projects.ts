@@ -222,4 +222,32 @@ export const projects: Project[] = [
     image: "/work/tpm-contracting.png",
     liveUrl: "https://www.tpmcontracting.co.za",
   },
+  {
+    slug: "dtw-fuels",
+    title: "DTW Fuels",
+    category: "Website",
+    icon: Globe,
+    industry: "Wholesale Petroleum Supply",
+    result:
+      "A bold, dependable home online for a Durban wholesale fuel supplier delivering in bulk from its own depot.",
+    description:
+      "Royal blue with a warm gold accent, built around the full product range from diesel, petrol and LPG to aviation gasoline and jet fuel, with a gallery and a clear path to make contact.",
+    accent: "#003594",
+    image: "/work/dtw-fuels-poster.png",
+    liveUrl: "https://dtwfuels.co.za",
+  },
+  {
+    slug: "platinum-projects-sa",
+    title: "Platinum Projects SA",
+    category: "Website",
+    icon: Globe,
+    industry: "Electrical & Construction",
+    result:
+      "A credentialed, premium presence for a CIDB-registered contractor serving homes, businesses and industrial sites across South Africa.",
+    description:
+      "Deep navy with a confident orange accent, spanning electrical installs, compliance and COC, solar and backup power, plus general building and maintenance, with projects and an easy way to get in touch.",
+    accent: "#00001F",
+    image: "/work/platinum-projects-poster.png",
+    liveUrl: "https://platinumprojects.co.za",
+  },
 ];
